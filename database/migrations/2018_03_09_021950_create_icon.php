@@ -14,7 +14,7 @@ class CreateIcon extends Migration
     public function up()
     {
         Schema::create('icon', function (Blueprint $table) {
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->timestamps();
 
         });

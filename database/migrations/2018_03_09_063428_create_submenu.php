@@ -16,9 +16,9 @@ class CreateSubmenu extends Migration
         //
          Schema::create('submenu', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('menu_id');
-            $table->string('name');
-            $table->string('link');
+            $table->integer('menu_id')->nullable();
+            $table->string('name')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }
