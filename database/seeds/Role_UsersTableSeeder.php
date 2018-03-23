@@ -13,12 +13,15 @@ class Role_UsersTableSeeder extends Seeder
     {
         //
         DB::table('role_users')->truncate();
-        RoleUser::create([
-            'id' => '1',
-            'role_id' => '1',
-            'user_id' => '1',
-            'created_at' => '2017-10-31 19:54:38',
-            'updated_at' => '2017-10-31 19:54:38',
-        ]);
+
+        $role = new RoleUser();
+        $role->role_id = 1;
+        $role->user_id = 1;
+        $role->save();
+        
+        $role = new RoleUser();
+        $role->role_id = 1;
+        $role->user_id = 2;
+        $role->save();
     }
 }
