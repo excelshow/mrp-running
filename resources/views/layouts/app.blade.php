@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="description" content="Enterprise Resource Planning, Material Requirement Planning, PT. PAMINDO 3T">
+    <meta name="keywords" content="ERP, Enterprise Resource Planning, MRP, Material Requirement Planning">
+    <meta name="author" content="PT. PAMINDO 3 T">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
