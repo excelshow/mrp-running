@@ -23,6 +23,8 @@ Route::post('/send','MailController@send');
 // Dashboard
 Auth::routes();
 
+include('web_manufacturing.php');
+
 Route::group(['middleware' => 'auth'], function(){
   
   Route::get('/home', 'HomeController@index');
