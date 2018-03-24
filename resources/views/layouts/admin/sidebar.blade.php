@@ -24,7 +24,7 @@
       {{sidebar_akses()}}
   
       {{-- manufacturing --}}
-      <li class="treeview {{ Request::is('manufacturing/operations') || Request::is('manufacturing/operations/*') || Request::is('manufacturing/operations/*/*') || Request::is('manufacturing/operations/*/*/*') || Request::is('manufacturing/operations/*/*/*/*') || Request::is('manufacturing/reporting') || Request::is('manufacturing/reporting/*') || Request::is('manufacturing/reporting/*/*') || Request::is('manufacturing/reporting/*/*/*') || Request::is('manufacturing/reporting/*/*/*/*')? 'menu-open active' : '' }}">
+      <li class="treeview {{ Request::is('manufacturing/operations') || Request::is('manufacturing/operations/*') || Request::is('manufacturing/operations/*/*') || Request::is('manufacturing/operations/*/*/*') || Request::is('manufacturing/operations/*/*/*/*') || Request::is('manufacturing/reporting') || Request::is('manufacturing/reporting/*') || Request::is('manufacturing/reporting/*/*') || Request::is('manufacturing/reporting/*/*/*') || Request::is('manufacturing/reporting/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
           <i class="fa fa-cogs"></i> <span>Manufacturing</span>
           <span class="pull-right-container">
@@ -41,6 +41,34 @@
           <li class="{{ Request::is('manufacturing/reporting') || Request::is('manufacturing/reporting/*') || Request::is('manufacturing/reporting/*/*') ? 'active' : '' }}" style="">
             <a href="{{ url('manufacturing/reporting') }}">
               <i class="fa fa-bar-chart"></i> <span>Reporting</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="treeview {{ Request::is('planning/*') || Request::is('planning/*/*') ? 'menu-open active' : '' }}">
+        <a href="#">
+          <i class="fa fa-cogs"></i> <span>Planning</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          
+          <li class="{{ Request::is('planning/maintenance-data-day-off') || Request::is('planning/maintenance-data-day-off/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('planning/maintenance-data-day-off') }}">
+              <i class="fa fa-refresh"></i> <span>Maintenace Data Day Off</span>
+            </a>
+          </li>
+          <li class="{{ Request::is('planning/maintenance-data-planning') || Request::is('planning/maintenance-data-planning/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('planning/maintenance-data-planning') }}">
+              <i class="fa fa-refresh"></i> <span>Maintenace Data Planning</span>
+            </a>
+          </li>
+          <li class="{{ Request::is('planning/maintenance-data-work-center') || Request::is('planning/operations/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('planning/maintenance-data-work-center') }}">
+              <i class="fa fa-refresh"></i> <span>Maintenace Data Work Center</span>
             </a>
           </li>
 

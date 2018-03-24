@@ -67,7 +67,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="col-md-12">
-                      <label class="control-label">Deadline</label>
+                      <label class="control-label">Deadline Start</label>
                       <input type="date" name="deadline" class="form-control">  
                     </div>
                   </div>

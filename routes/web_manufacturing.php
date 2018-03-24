@@ -1,5 +1,6 @@
 <?php
 
+/* manufacturing */
 Route::group(['middleware' => 'auth', 'namespace'=>'Admin', 'prefix' => 'manufacturing', 'as' => 'manufacturing'], function(){
 
 	/* operations */
@@ -15,4 +16,11 @@ Route::group(['middleware' => 'auth', 'namespace'=>'Admin', 'prefix' => 'manufac
 		Route::get('/', 'ManufactureController@reporting');
 		Route::get('manufacturing-orders', 'ReportingManufacturingOrdersController@index');
 	});
+});
+
+/* planning */
+Route::group(['namespace'=>'Admin', 'prefix' => 'planning', 'as' => 'planning'], function(){
+	Route::resource('maintenance-data-day-off', 'MaintenanceDataDayOffController');
+	Route::resource('maintenance-data-planning', 'MaintenanceDataPlanningController');
+	Route::resource('maintenance-data-work-center', 'MaintenanceDataWorkCenterController');
 });
