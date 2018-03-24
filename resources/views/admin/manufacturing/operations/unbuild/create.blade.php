@@ -12,7 +12,7 @@
       <a href="{{ url('home') }}"><i class="fa fa-dashboard"></i> Home</a>
     </li>
     <li>
-      <a href="{{ url('manufacturing') }}"><i class="fa fa-cubes"></i> Unbuild Orders</a>
+      <a href="{{ url('manufacturing/operations/unbuild-orders') }}"><i class="fa fa-cubes"></i> Unbuild Orders</a>
     </li>
     <li class="active">Create Unbuild Orders</li>
   </ol>
@@ -92,8 +92,8 @@
     </div>
 
     <div class="modal-container">
-      @include('admin.operations.components.modal-add-product')
-      @include('admin.operations.components.modal-add-bill-of-material')
+      @include('admin.manufacturing.operations.components.modal-add-product')
+      @include('admin.manufacturing.operations.components.modal-add-bill-of-material')
     </div>
   </div>
 </section>

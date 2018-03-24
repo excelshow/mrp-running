@@ -21,7 +21,7 @@
           <div class="box-header clearfix">
             <h3 class="box-title pull-left">List Order</h3>
             <div class="pull-right">
-              <a href="{{ url('operations/manufacturing/create') }}">
+              <a href="{{ url('manufacturing/operations/manufacturing-orders/create') }}">
                 <div class="btn btn-primary">
                   Create New
                 </div>
@@ -30,7 +30,7 @@
           </div>
 
           <div class="box-body">
-            <table class="table table-borderless" id="datatable-manufacturing">
+            <table class="table table-borderless" id="datatable-manufacturing-orders">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -86,7 +86,7 @@
 @push('scripts')
   <script type="text/javascript">
     $(document).ready(function() {
-      $('#datatable-manufacturing').DataTable();
+      $('#datatable-manufacturing-orders').DataTable();
     });
 @endpush
 

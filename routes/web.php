@@ -23,7 +23,7 @@ Route::post('/send','MailController@send');
 // Dashboard
 Auth::routes();
 
-include('web_operations.php');
+include('web_manufacturing.php');
 
 Route::group(['middleware' => 'auth'], function(){
   
