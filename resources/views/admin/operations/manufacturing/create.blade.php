@@ -12,7 +12,7 @@
       <a href="{{ url('home') }}"><i class="fa fa-dashboard"></i> Home</a>
     </li>
     <li>
-      <a href="{{ url('manufacturing') }}"><i class="fa fa-cubes"></i> Manufacturing</a>
+      <a href="{{ url('operations/manufacturing') }}"><i class="fa fa-cubes"></i> Manufacturing</a>
     </li>
     <li class="active">Create Manufacturing</li>
   </ol>
