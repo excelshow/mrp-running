@@ -1,17 +1,16 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Manufacturing | ')
+@section('title', 'Scrap Orders | ')
 
 @section('content')
 
   <section class="content-header">
     <h1>
-      Manufacturing
-      <small>Manufacturing Order</small>
+      Scrap Orders
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active">Manufacturing</li>
+      <li class="active">Scrap Orders</li>
     </ol>
   </section>
 
@@ -22,7 +21,7 @@
           <div class="box-header clearfix">
             <h3 class="box-title pull-left">List Order</h3>
             <div class="pull-right">
-              <a href="{{ url('operations/manufacturing/create') }}">
+              <a href="{{ url('operations/scrap/create') }}">
                 <div class="btn btn-primary">
                   Create New
                 </div>
@@ -31,44 +30,23 @@
           </div>
 
           <div class="box-body">
-            <table class="table table-borderless" id="datatable-manufacturing">
+            <table class="table table-borderless" id="datatable-scrap">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Quantity to Produce</th>
-                  <th>Deadline</th> 
-                  <th>Responsible</th>
-                  <th>Actions</th>
+                  <th>Reference</th>
+                  <th>Created Date</th>
+                  <th>Product</th> 
+                  <th>Quantity</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody id="item">
                 <tr>
-                  <td>Motor</td>
-                  <td>1000</td>
-                  <td>12-12-2018</td>
-                  <td>Maulana</td>
-                  <td>
-                    <button class="btn btn-info"">
-                      <span class="glyphicon glyphicon-edit"></span> Edit
-                    </button>
-                    <button class="btn btn-danger">
-                      <span class="glyphicon glyphicon-trash"></span> Delete
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Mobil</td>
-                  <td>1000</td>
-                  <td>12-12-2018</td>
-                  <td>Maulana</td>
-                  <td>
-                    <button class="btn btn-info"">
-                      <span class="glyphicon glyphicon-edit"></span> Edit
-                    </button>
-                    <button class="btn btn-danger">
-                      <span class="glyphicon glyphicon-trash"></span> Delete
-                    </button>
-                  </td>
+                  <td>SP/001</td>
+                  <td>12-03-2018</td>
+                  <td>Ban</td>
+                  <td>145</td>
+                  <td>Done</td>
                 </tr>
               </tbody>
             </table>
@@ -87,7 +65,7 @@
 @push('scripts')
   <script type="text/javascript">
     $(document).ready(function() {
-      $('#datatable-manufacturing').DataTable();
+      $('#datatable-scrap').DataTable();
     });
 @endpush
 
