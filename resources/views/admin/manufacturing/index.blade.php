@@ -22,7 +22,7 @@
           <div class="box-header clearfix">
             <h3 class="box-title pull-left">List Order</h3>
             <div class="pull-right">
-              <a href="#">
+              <a href="{{ url('manufacturing/create') }}">
                 <div class="btn btn-primary">
                   Create New
                 </div>
@@ -34,31 +34,42 @@
             <table class="table table-borderless" id="datatable-manufacturing">
               <thead>
                 <tr>
-                  <th class="text-center">Name</th>
-                  <th class="text-center">Quantity to Produce</th>
-                  <th class="text-center">Bill of materials</th> 
-                  <th class="text-center">Deadline</th> 
-                  <th class="text-center">Responsible</th>
-                  <th class="text-center">Actions</th>
+                  <th>Name</th>
+                  <th>Quantity to Produce</th>
+                  <th>Deadline</th> 
+                  <th>Responsible</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody id="item">
-              {{-- @foreach($manufactures as $item)
-                <tr class="item{{$item->id}}">
-                  <td>{{$item->name}}</td>
-                  <td>{{$item->email}}</td>
-                  <td>{{$item->role}}</td>
-                  <td>{{$item->status}}</td>
+                <tr>
+                  <td>Motor</td>
+                  <td>1000</td>
+                  <td>12-12-2018</td>
+                  <td>Maulana</td>
                   <td>
-                    <button class="edit-modal btn btn-info" data-info="{{$item->id}},{{$item->name}},{{$item->email}},{{$item->role}},{{$item->status}}">
+                    <button class="btn btn-info"">
                       <span class="glyphicon glyphicon-edit"></span> Edit
                     </button>
-                    <button class="delete-modal btn btn-danger"
-                      data-info="{{$item->id}},{{$item->name}},{{$item->email}},{{$item->role}},{{$item->status}}">
+                    <button class="btn btn-danger">
                       <span class="glyphicon glyphicon-trash"></span> Delete
-                    </button></td>
+                    </button>
+                  </td>
                 </tr>
-              @endforeach --}}
+                <tr>
+                  <td>Mobil</td>
+                  <td>1000</td>
+                  <td>12-12-2018</td>
+                  <td>Maulana</td>
+                  <td>
+                    <button class="btn btn-info"">
+                      <span class="glyphicon glyphicon-edit"></span> Edit
+                    </button>
+                    <button class="btn btn-danger">
+                      <span class="glyphicon glyphicon-trash"></span> Delete
+                    </button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>

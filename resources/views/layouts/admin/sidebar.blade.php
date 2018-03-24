@@ -23,7 +23,7 @@
 
       {{sidebar_akses()}}
 
-      <li class="{{ Request::is('manufacturing') ? 'active' : '' }}" style="">
+      <li class="{{ Request::is('manufacturing') || Request::is('manufacturing/*') || Request::is('manufacturing/*/*') ? 'active' : '' }}" style="">
         <a href="{{ url('manufacturing') }}">
           <i class="fa fa-cubes"></i> <span>Manufacturing</span>
         </a>

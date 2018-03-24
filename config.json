@@ -8,17 +8,18 @@
 			"./public/themes/AdminLTE/2.4.2/bower_components/jquery/dist/jquery.min.js",
 			"./public/themes/AdminLTE/2.4.2/bower_components/jquery-ui/jquery-ui.min.js",
 			"./public/themes/AdminLTE/2.4.2/bower_components/bootstrap/dist/js/bootstrap.min.js",
-			"./public/themes/AdminLTE/2.4.2/dist/js/adminlte.min.js",
 			"./public/themes/AdminLTE/2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js",
 			"./public/themes/AdminLTE/2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js",
 			"./public/themes/AdminLTE/2.4.2/plugins/iCheck/icheck.min.js",
+			"./public/themes/AdminLTE/2.4.2/dist/js/adminlte.min.js",
 			"./public/js/jquery.form-validator.min.js"
 		],
 		"styles": [
 			"./public/themes/AdminLTE/2.4.2/bower_components/bootstrap/dist/css/bootstrap.min.css",
 			"./public/themes/AdminLTE/2.4.2/bower_components/font-awesome/css/font-awesome.min.css",
-			"./public/themes/AdminLTE/2.4.2/dist/css/AdminLTE.min.css",
 			"./public/themes/AdminLTE/2.4.2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css",
+			"./public/themes/AdminLTE/2.4.2/plugins/iCheck/all.css",
+			"./public/themes/AdminLTE/2.4.2/dist/css/AdminLTE.min.css",
 			"./public/themes/AdminLTE/2.4.2/dist/css/skins/_all-skins.min.css"
 		]
 	}
