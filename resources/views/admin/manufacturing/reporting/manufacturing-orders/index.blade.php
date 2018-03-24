@@ -79,7 +79,7 @@
             },
 
             title: {
-                text: 'User Count'
+                text: 'Manufacturing Order'
             },
 
             series: [{
