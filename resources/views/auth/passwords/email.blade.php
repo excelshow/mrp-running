@@ -6,7 +6,7 @@
 
 <div class="login-box" style="width: 560px;">
   <div class="login-logo">
-    <a href="/">Clean <b>&</b> Clear</a>
+    <a href="/">Pamindo</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

@@ -60,8 +60,6 @@
                     </div>
                   </div>                  
               </div>
-
-
               <div class="row">
                 <div class="col-md-12 clearfix">
                   <div class="btn btn-primary btn-pamindo pull-right">
