@@ -29,13 +29,13 @@
               <div class="form-group">
                 <div class="col-md-12">
                   <label>
-                    <input type="checkbox" class="minimal-red">
+                    <input type="checkbox">
                     Can be sold
                   </label>
                 </div>
                 <div class="col-md-12">
                   <label>
-                    <input type="checkbox" class="minimal-red">
+                    <input type="checkbox">
                     Can be purchased
                   </label>
                 </div>
@@ -114,7 +114,20 @@
                         <div class="form-group">
                           <div class="col-md-12">
                             <label class="control-label">Routes</label>
-                            <input type="text" name="routes" class="form-control">  
+                            <div class="form-group">
+                              <div class="col-md-12">
+                                <label>
+                                  <input type="checkbox">
+                                  Manufacture
+                                </label>
+                              </div>
+                              <div class="col-md-12">
+                                <label>
+                                  <input type="checkbox">
+                                  Make to Order
+                                </label>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div class="form-group">
@@ -153,38 +166,30 @@
                     {{csrf_field()}}
                     <div class="row">
                       <div class="col-md-6">
-                        <h4>Operations</h4>
                         <div class="form-group">
                           <div class="col-md-12">
-                            <label class="control-label">Routes</label>
-                            <input type="text" name="routes" class="form-control">  
+                            <label class="control-label">Description for Customers</label>
+                            <textarea class="form-control" name="description_for_customers" rows="3" placeholder="this note will show up on sales orders"></textarea>
                           </div>
                         </div>
                         <div class="form-group">
                           <div class="col-md-12">
-                            <label class="control-label">Manufacturing Lead Time</label>
-                            <input type="text" name="manufacturing_lead_time" class="form-control">  
+                            <label class="control-label">Description for Delivery Orders</label>
+                            <textarea class="form-control" name="description_for_delivery_orders" rows="3" placeholder="this note will show up on delivery orders"></textarea>
                           </div>
                         </div>
                         <div class="form-group">
                           <div class="col-md-12">
-                            <label class="control-label">Customer Lead Time</label>
-                            <input type="text" name="customer_lead_time" class="form-control">  
+                            <label class="control-label">Description for Internal Transfers</label>
+                            <textarea class="form-control" name="description_for_internal_transfers" rows="3" placeholder="this note will show up on internal transfer orders (e.g. where to pick the product in the warehouse)"></textarea>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
-                        <h4>Logistics</h4>
                         <div class="form-group">
                           <div class="col-md-12">
-                            <label class="control-label">Weight (kg)</label>
-                            <input type="text" name="routes" class="form-control">  
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <div class="col-md-12">
-                            <label class="control-label">Volume (m3)</label>
-                            <input type="text" name="manufacturing_lead_time" class="form-control">  
+                            <label class="control-label">Description for Receptions</label>
+                            <textarea class="form-control" name="description_for_receptions" rows="3" placeholder="this note will show up on the receipt orders (e.g. where to store the product in the warehouse)"></textarea>
                           </div>
                         </div>
                       </div>
@@ -199,7 +204,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-primary btn-pamindo">Save</button>
       </div>
     </div>
   </div>

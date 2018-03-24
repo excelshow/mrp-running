@@ -55,7 +55,7 @@
                     <div class="col-md-12">
                       <div class="clearfix">
                         <label class="control-label pull-left">Bill of Materials</label>  
-                        <div class="pull-right btn-xs btn btn-default">
+                        <div class="pull-right btn-xs btn btn-default"  data-toggle="modal" data-target="#modal-add-bill-of-material" data-backdrop="static" data-keyboard="false">
                           <i class="fa fa-plus"></i> Add Bill of Material
                         </div>
                       </div>
@@ -75,7 +75,7 @@
                     <div class="col-md-12">
                       <div class="clearfix">
                         <label class="control-label pull-left">Responsible</label>  
-                        <div class="pull-right btn-xs btn btn-default">
+                        <div class="pull-right btn-xs btn btn-default"  data-toggle="modal" data-target="#modal-add-responsible" data-backdrop="static" data-keyboard="false">
                           <i class="fa fa-plus"></i> Add Responsible
                         </div>
                       </div>
@@ -100,30 +100,30 @@
               </div>
             </form>
 
-
             <div class="row">
               <div class="col-md-12">
                 <!-- Custom Tabs -->
                 <div class="nav-tabs-custom">
                   <ul class="nav nav-tabs">
-                    <li class="active"><a href="#consumed_product" data-toggle="tab" aria-expanded="true">Consumed Materials</a></li>
-                    <li class=""><a href="#finished_product" data-toggle="tab" aria-expanded="false">Finished Products</a></li>
-                    <li class=""><a href="#miscellaneous" data-toggle="tab" aria-expanded="false">Miscellaneous</a></li>
+                    <li class="active"><a href="#consumed_product_tab" data-toggle="tab" aria-expanded="true">Consumed Materials</a></li>
+                    <li class=""><a href="#finished_product_tab" data-toggle="tab" aria-expanded="false">Finished Products</a></li>
+                    <li class=""><a href="#miscellaneous_tab" data-toggle="tab" aria-expanded="false">Miscellaneous</a></li>
                   </ul>
                   <div class="tab-content">
-                    <div class="tab-pane active" id="consumed_product">
+                    <div class="tab-pane active" id="consumed_product_tab">
                       Empty Consumed Materials
                     </div>
-                    <div class="tab-pane" id="finished_product">
+                    <div class="tab-pane" id="finished_product_tab">
                       Empty Finished Products
                     </div>
-                    <div class="tab-pane" id="miscellaneous">
+                    <div class="tab-pane" id="miscellaneous_tab">
                       Empty Miscellaneous
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
