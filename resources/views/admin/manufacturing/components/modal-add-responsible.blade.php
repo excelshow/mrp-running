@@ -33,13 +33,11 @@
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <label class="control-label">Phone</label>
                   <input type="text" name="phone" class="form-control">  
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <label class="control-label">Mobile</label>
                   <input type="text" name="mobile" class="form-control">  
                 </div>
