@@ -11,6 +11,6 @@ class ManufactureController extends Controller
     	return view('admin.manufacturing.operations.index');
     }
     public function reporting() {
-    	return view('admin.manufacturing.operations.index');
+    	return view('admin.manufacturing.reporting.index');
     }
 }

@@ -9,4 +9,9 @@ Route::group(['middleware' => 'auth', 'namespace'=>'Admin', 'prefix' => 'manufac
 		Route::resource('unbuild-orders', 'UnbuildOrdersController');
 		Route::resource('scrap-orders', 'ScrapOrdersController');
 	});
+
+	/* reporting */
+	Route::group(['prefix' => 'reporting', 'as' => 'reporting'], function(){
+		Route::get('/', 'ManufactureController@reporting');
+	});
 });
