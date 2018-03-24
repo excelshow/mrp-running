@@ -62,7 +62,7 @@
     var data = $( '#roles' ).DataTable({
       processing: true,
       serverSide: true,
-      ajax: "{!! route( 'jabatan-pengeluar-kategori-cagaran.getdata' ) !!}",
+      ajax: "{!! route( 'role.getdata' ) !!}",
       columns: [
       { data: 'name', name: 'name'},
       { data: 'action', name: 'action', class: 'text-center', searchable: false, orderable: false }
