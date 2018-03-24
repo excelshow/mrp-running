@@ -13,5 +13,6 @@ Route::group(['middleware' => 'auth', 'namespace'=>'Admin', 'prefix' => 'manufac
 	/* reporting */
 	Route::group(['prefix' => 'reporting', 'as' => 'reporting'], function(){
 		Route::get('/', 'ManufactureController@reporting');
+		Route::get('manufacturing-orders', 'ReportingManufacturingOrdersController@index');
 	});
 });

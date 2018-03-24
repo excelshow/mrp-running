@@ -15,6 +15,7 @@
   </section>
 
   <section class="content">
+    
     <div class="row">
       <div class="col-lg-12 col-xs-12">
         <div class="small-box bg-aqua min">
@@ -28,8 +29,8 @@
           <a href="{{ url('manufacturing/reporting/manufacturing-orders') }}" class="small-box-footer">Enter <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
-
     </div>
+
   </section>
 
 @endsection

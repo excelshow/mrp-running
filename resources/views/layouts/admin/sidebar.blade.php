@@ -24,7 +24,7 @@
       {{sidebar_akses()}}
   
       {{-- manufacturing --}}
-      <li class="treeview {{ Request::is('manufacturing/operations') || Request::is('manufacturing/operations/*') || Request::is('manufacturing/operations/*/*') || Request::is('manufacturing/operations/*/*/*') || Request::is('manufacturing/operations/*/*/*/*') ? 'menu-open active' : '' }}">
+      <li class="treeview {{ Request::is('manufacturing/operations') || Request::is('manufacturing/operations/*') || Request::is('manufacturing/operations/*/*') || Request::is('manufacturing/operations/*/*/*') || Request::is('manufacturing/operations/*/*/*/*') || Request::is('manufacturing/reporting') || Request::is('manufacturing/reporting/*') || Request::is('manufacturing/reporting/*/*') || Request::is('manufacturing/reporting/*/*/*') || Request::is('manufacturing/reporting/*/*/*/*')? 'menu-open active' : '' }}">
         <a href="#">
           <i class="fa fa-cogs"></i> <span>Manufacturing</span>
           <span class="pull-right-container">

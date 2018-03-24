@@ -67,5 +67,6 @@
     $(document).ready(function() {
       $('#datatable-scrap-orders').DataTable();
     });
+  </script>
 @endpush
 

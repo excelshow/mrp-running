@@ -67,5 +67,6 @@
     $(document).ready(function() {
       $('#datatable-unbuild-orders').DataTable();
     });
+  </script>
 @endpush
 

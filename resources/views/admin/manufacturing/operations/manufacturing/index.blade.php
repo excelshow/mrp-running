@@ -88,5 +88,6 @@
     $(document).ready(function() {
       $('#datatable-manufacturing-orders').DataTable();
     });
+  </script>
 @endpush
 
