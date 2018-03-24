@@ -90,6 +90,14 @@ Route::group(['middleware' => 'auth'], function(){
   });
 
 
+  Route::group( ['prefix' => 'bom'], function()  {
+    Route::get( 'getData', [ 'as' => 'bom.getdata', 'uses' => 'Admin\BomController@getData' ] );
+    Route::get( '/' , [ 'as' => 'bom.index', 'uses' => 'Admin\BomController@index' ]);
+    Route::get( 'create' , [ 'as' => 'bom.create', 'uses' => 'Admin\BomController@create' ]);
+    Route::post( 'store' , [ 'as' => 'bom.store', 'uses' => 'Admin\BomController@store' ]);
+    Route::get( 'edit/{id}' , [ 'as' => 'bom.edit', 'uses' => 'Admin\BomController@edit' ]);
+    Route::put( 'update/{id}' , [ 'as' => 'bom.update', 'uses' => 'Admin\BomController@update' ]);
+  });
   Route::group( ['prefix' => 'warehouse'], function()  {
     Route::get( 'getData', [ 'as' => 'master.warehouse.getdata', 'uses' => 'Admin\Master\WarehouseController@getData' ] );
     Route::get( '/' , [ 'as' => 'master.warehouse.index', 'uses' => 'Admin\Master\WarehouseController@index' ]);
