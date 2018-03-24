@@ -93,9 +93,9 @@
 
               <div class="row">
                 <div class="col-md-12 clearfix">
-                  <div class="btn btn-primary btn-pamindo pull-right">
+                  <a class="btn btn-primary btn-pamindo pull-right" href="{{ url('manufacturing/operations/manufacturing-orders') }}">
                     Save
-                  </div>
+                  </a>
                 </div>
               </div>
             </form>
