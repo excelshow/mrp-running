@@ -22,8 +22,7 @@ class SubmenuSeeder extends Seeder
           (4, 4, 'Responsible','responsible'),
           (5, 4, 'Tools','tools'),
           (6, 4, 'Work Center','workcenter'),
-          (7, 4, 'Work Order Message','workordermessage'),
-          (8, 4, 'Routing','routing')
+          (7, 4, 'Routing','routing')
          ");
     }
 }

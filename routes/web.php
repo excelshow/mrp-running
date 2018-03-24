@@ -213,4 +213,12 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get( 'edit/{id}' , [ 'as' => 'workcenter.edit', 'uses' => 'Admin\Master\WorkCenterController@edit' ]);
     Route::put( 'update/{id}' , [ 'as' => 'workcenter.update', 'uses' => 'Admin\Master\WorkCenterController@update' ]);
   });
+   Route::group( ['prefix' => 'routing'], function()  {
+    Route::get( 'getData', [ 'as' => 'routing.getdata', 'uses' => 'Admin\Master\RoutingController@getData' ] );
+    Route::get( '/' , [ 'as' => 'routing.index', 'uses' => 'Admin\Master\RoutingController@index' ]);
+    Route::get( 'create' , [ 'as' => 'routing.create', 'uses' => 'Admin\Master\RoutingController@create' ]);
+    Route::post( 'store' , [ 'as' => 'routing.store', 'uses' => 'Admin\Master\RoutingController@store' ]);
+    Route::get( 'edit/{id}' , [ 'as' => 'routing.edit', 'uses' => 'Admin\Master\RoutingController@edit' ]);
+    Route::put( 'update/{id}' , [ 'as' => 'routing.update', 'uses' => 'Admin\Master\RoutingController@update' ]);
+  });
 });

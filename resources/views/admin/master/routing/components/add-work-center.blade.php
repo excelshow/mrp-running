@@ -1,30 +1,13 @@
-@extends('layouts.admin.app')
-@section('title', ucwords(Request::segment(1)))
-@section('content')
-<section class="content-header">
-  <h1>
-    {{ucwords(Request::segment(1))}}
-  </h1>
-  <ol class="breadcrumb">
-    <li>
-      <a href="{{ url('home') }}"><i class="fa fa-dashboard"></i> Home</a>
-    </li>
-    <li>
-      <a href="{{ url('manufacturing') }}"><i class="fa fa-cubes"></i>{{ucwords(Request::segment(1))}}</a>
-    </li>
-    <li class="active">{{ucwords(Request::segment(1))}}</li>
-  </ol>
-</section>
-<section class="content">
-  <div class="create-manufacturing-container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="box box-primary">
-          <div class="box-header with-border">
-            <h3 class="box-title">{{ucwords(Request::segment(1))}}</h3>
-          </div>
-          <div class="box-body">
-              <div class="row">
+<div class="modal fade" id="add-work-center">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Add Work Center</h4>
+      </div>
+      <div class="modal-body">
+         <div class="row">
                 <div class="col-md-6">
                    <div class="form-group">
                     <div class="col-md-12">
@@ -79,30 +62,11 @@
                   </div>                  
               </div>
             </div>
-            <form class="form-horizontal" action="{{route('workcenter.index')}}" method="get">
-              {{csrf_field()}}
-              <div class="row">
-                <div class="col-md-12 clearfix">
-                  <button type="submit" class="btn btn-primary btn-pamindo pull-right">
-                   Save
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary btn-pamindo">Save</button>
       </div>
     </div>
   </div>
-</section>
-
-@endsection
-
-@push('styles')
-  <link rel="stylesheet" type="text/css" href="{{ mix('css/create-manufacturing.css') }}">
-@endpush
-
-@push('scripts')
-@endpush
-
-
+</div>
