@@ -16,8 +16,8 @@ class CreateWarehouse extends Migration
         //
          Schema::create('warehouse', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('location');
+            $table->string('name')->nullable();
+            $table->string('location')->nullable();
             $table->timestamps();
         });
     }
