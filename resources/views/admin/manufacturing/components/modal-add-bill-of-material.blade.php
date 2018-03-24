@@ -11,16 +11,49 @@
           {{csrf_field()}}
           <div class="row">
             <div class="col-md-6">
-
               <div class="form-group">
                 <div class="col-md-12">
                   <label class="control-label">Product</label>
                   <input type="text" name="product_name" class="form-control">  
                 </div>
               </div>
+              <div class="form-group">
+                <div class="col-md-12">
+                  <label class="control-label">Quantity</label>
+                  <input type="text" name="product_quantity" class="form-control">  
+                </div>
+              </div>
             </div>
-            <div class="col-md-6">
 
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-12">
+                  <label class="control-label">Reference</label>
+                  <input type="text" name="product_reference" class="form-control">  
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-12">
+                  <label class="control-label">BoM Type</label>
+                  <div class="form-group">
+                    <div class="col-md-12">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                          Manufacture this product
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          Kit
+                        </label>
+                      </div>
+                    </div>
+                    
+                  </div>  
+                </div>
+              </div>
             </div>
           </div>
         </form>
@@ -29,42 +62,21 @@
           <div class="col-md-12">
             <div class="nav-tabs-custom">
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#components_tab" data-toggle="tab" aria-expanded="true">General Informations</a></li>
-                <li class=""><a href="#material_miscellaneous_tab" data-toggle="tab" aria-expanded="false">Sales</a></li>
+                <li class="active"><a href="#components_tab" data-toggle="tab" aria-expanded="true">Components</a></li>
+                <li class=""><a href="#material_miscellaneous_tab" data-toggle="tab" aria-expanded="false">Miscellaneous</a></li>
               </ul>
               <div class="tab-content">
                 <div class="tab-pane active" id="components_tab">
-                  <form class="form-horizontal" action="" method="post">
-                    {{csrf_field()}}
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <div class="col-md-12">
-                            <label class="control-label">Product Type</label>
-                            <input type="text" name="product_type" class="form-control">  
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <div class="col-md-12">
-                            <label class="control-label">Sales Price</label>
-                            <input type="text" name="sales_price" class="form-control">  
-                          </div>
-                        </div>
-                      </div>
-                    </div>  
-                  </form>
-
+                  Components
                 </div>
                 <div class="tab-pane" id="material_miscellaneous_tab">
-                  Empty Sales
+                  Miscellaneous
                 </div>
-
               </div>
             </div>
           </div>
         </div>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
