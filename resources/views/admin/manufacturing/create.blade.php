@@ -114,19 +114,14 @@
                     <div class="tab-pane active" id="consumed_product">
                       Empty Consumed Materials
                     </div>
-                    <!-- /.tab-pane -->
                     <div class="tab-pane" id="finished_product">
                       Empty Finished Products
                     </div>
-                    <!-- /.tab-pane -->
                     <div class="tab-pane" id="miscellaneous">
                       Empty Miscellaneous
                     </div>
-                    <!-- /.tab-pane -->
                   </div>
-                  <!-- /.tab-content -->
                 </div>
-                <!-- nav-tabs-custom -->
               </div>
             </div>
           </div>
