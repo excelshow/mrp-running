@@ -22,30 +22,28 @@
       </li>
 
       {{sidebar_akses()}}
-
-      <li class="treeview {{ Request::is('operations/*') || Request::is('operations/*/*') || Request::is('operations/*/*/*') ? 'menu-open active' : '' }}">
+  
+      {{-- manufacturing --}}
+      <li class="treeview {{ Request::is('manufacturing/operations') || Request::is('manufacturing/operations/*') || Request::is('manufacturing/operations/*/*') || Request::is('manufacturing/operations/*/*/*') || Request::is('manufacturing/operations/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
-          <i class="fa fa-cogs"></i> <span>Operations</span>
+          <i class="fa fa-cogs"></i> <span>Manufacturing</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li class="{{ Request::is('operations/manufacturing') || Request::is('operations/manufacturing/*') || Request::is('operations/manufacturing/*/*') ? 'active' : '' }}" style="">
-            <a href="{{ url('operations/manufacturing') }}">
-              <i class="fa fa-cubes"></i> <span>Manufacturing Orders</span>
+          
+          <li class="{{ Request::is('manufacturing/operations') || Request::is('manufacturing/operations/*') || Request::is('manufacturing/operations/*/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('manufacturing/operations') }}">
+              <i class="fa fa-cubes"></i> <span>Operations</span>
             </a>
           </li>
-          <li class="{{ Request::is('operations/unbuild') || Request::is('operations/unbuild/*') || Request::is('operations/unbuild/*/*') ? 'active' : '' }}" style="">
-            <a href="{{ url('operations/unbuild') }}">
-              <i class="fa fa-square"></i> <span>Unbuild Orders</span>
+          <li class="{{ Request::is('manufacturing/reporting') || Request::is('manufacturing/reporting/*') || Request::is('manufacturing/reporting/*/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('manufacturing/reporting') }}">
+              <i class="fa fa-bar-chart"></i> <span>Reporting</span>
             </a>
           </li>
-          <li class="{{ Request::is('operations/scrap') || Request::is('operations/scrap/*') || Request::is('operations/scrap/*/*') ? 'active' : '' }}" style="">
-            <a href="{{ url('operations/scrap') }}">
-              <i class="fa fa-tasks"></i> <span>Scrap Orders</span>
-            </a>
-          </li>
+
         </ul>
       </li>
 

@@ -14,7 +14,7 @@ class ManufacturingOrdersController extends Controller
      */
     public function index()
     {
-        return view('admin.operations.manufacturing.index');
+        return view('admin.manufacturing.operations.manufacturing.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ManufacturingOrdersController extends Controller
      */
     public function create()
     {
-        return view('admin.operations.manufacturing.create');
+        return view('admin.manufacturing.operations.manufacturing.create');
     }
 
     /**
