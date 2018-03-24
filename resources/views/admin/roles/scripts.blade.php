@@ -2,17 +2,6 @@
   $.validate({
    
   });
-  function updateCountdown() {
-        // 140 is the max message length
-        var remaining = 255 - jQuery('#description').val().length;
-        jQuery('.countdown').text(remaining + ' characters remaining.');
-    }
-
-    jQuery(document).ready(function($) {
-        updateCountdown();
-        $('#description').change(updateCountdown);
-        $('#description').keyup(updateCountdown);
-    });
 $(document).ready(function () {
     $('#checkBtn').click(function() {
       var checked = $("input[type=checkbox]:checked").length;
