@@ -23,10 +23,30 @@
 
       {{sidebar_akses()}}
 
-      <li class="{{ Request::is('manufacturing') || Request::is('manufacturing/*') || Request::is('manufacturing/*/*') ? 'active' : '' }}" style="">
-        <a href="{{ url('manufacturing') }}">
-          <i class="fa fa-cubes"></i> <span>Manufacturing</span>
+      <li class="treeview {{ Request::is('operations/*') || Request::is('operations/*/*') || Request::is('operations/*/*/*') ? 'menu-open active' : '' }}">
+        <a href="#">
+          <i class="fa fa-cogs"></i> <span>Operations</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
         </a>
+        <ul class="treeview-menu">
+          <li class="{{ Request::is('operations/manufacturing') || Request::is('operations/manufacturing/*') || Request::is('operations/manufacturing/*/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('operations/manufacturing') }}">
+              <i class="fa fa-cubes"></i> <span>Manufacturing Orders</span>
+            </a>
+          </li>
+          <li class="{{ Request::is('operations/unbuild') || Request::is('operations/unbuild/*') || Request::is('operations/unbuild/*/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('operations/unbuild') }}">
+              <i class="fa fa-square"></i> <span>Unbuild Orders</span>
+            </a>
+          </li>
+          <li class="{{ Request::is('operations/scrap') || Request::is('operations/scrap/*') || Request::is('operations/scrap/*/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('operations/scrap') }}">
+              <i class="fa fa-tasks"></i> <span>Scrap Orders</span>
+            </a>
+          </li>
+        </ul>
       </li>
 
     </ul>

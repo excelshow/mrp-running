@@ -22,7 +22,7 @@
           <div class="box-header clearfix">
             <h3 class="box-title pull-left">List Order</h3>
             <div class="pull-right">
-              <a href="{{ url('manufacturing/create') }}">
+              <a href="{{ url('operations/manufacturing/create') }}">
                 <div class="btn btn-primary">
                   Create New
                 </div>

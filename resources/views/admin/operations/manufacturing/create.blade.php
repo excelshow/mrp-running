@@ -130,9 +130,9 @@
     </div>
 
     <div class="modal-container">
-      @include('admin.manufacturing.components.modal-add-product')
-      @include('admin.manufacturing.components.modal-add-bill-of-material')
-      @include('admin.manufacturing.components.modal-add-responsible')
+      @include('admin.operations.manufacturing.components.modal-add-product')
+      @include('admin.operations.manufacturing.components.modal-add-bill-of-material')
+      @include('admin.operations.manufacturing.components.modal-add-responsible')
     </div>
   </div>
 </section>

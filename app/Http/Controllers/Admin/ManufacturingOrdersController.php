@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ManufacturingController extends Controller
+class ManufacturingOrdersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ManufacturingController extends Controller
      */
     public function index()
     {
-        return view('admin.manufacturing.index');
+        return view('admin.operations.manufacturing.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ManufacturingController extends Controller
      */
     public function create()
     {
-        return view('admin.manufacturing.create');
+        return view('admin.operations.manufacturing.create');
     }
 
     /**
