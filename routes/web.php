@@ -98,6 +98,15 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get( 'edit/{id}' , [ 'as' => 'bom.edit', 'uses' => 'Admin\BomController@edit' ]);
     Route::put( 'update/{id}' , [ 'as' => 'bom.update', 'uses' => 'Admin\BomController@update' ]);
   });
+  Route::group( ['prefix' => 'responsible'], function()  {
+    Route::get( 'getData', [ 'as' => 'master.responsible.getdata', 'uses' => 'Admin\Master\ResponsibleController@getData' ] );
+    Route::get( '/' , [ 'as' => 'master.responsible.index', 'uses' => 'Admin\Master\ResponsibleController@index' ]);
+    Route::get( 'create' , [ 'as' => 'master.responsible.create', 'uses' => 'Admin\Master\ResponsibleController@create' ]);
+    Route::post( 'store' , [ 'as' => 'master.responsible.store', 'uses' => 'Admin\Master\ResponsibleController@store' ]);
+    Route::get( 'edit/{id}' , [ 'as' => 'master.responsible.edit', 'uses' => 'Admin\Master\ResponsibleController@edit' ]);
+    Route::put( 'update/{id}' , [ 'as' => 'master.responsible.update', 'uses' => 'Admin\Master\ResponsibleController@update' ]);
+    Route::delete( 'destroy/{id}' , [ 'as' => 'master.responsible.destroy', 'uses' => 'Admin\Master\ResponsibleController@destroy' ]);
+  });
   Route::group( ['prefix' => 'warehouse'], function()  {
     Route::get( 'getData', [ 'as' => 'master.warehouse.getdata', 'uses' => 'Admin\Master\WarehouseController@getData' ] );
     Route::get( '/' , [ 'as' => 'master.warehouse.index', 'uses' => 'Admin\Master\WarehouseController@index' ]);

@@ -29,13 +29,12 @@
 
             <form class="form-horizontal" action="" method="post">
               {{csrf_field()}}
-              
               <div class="row">
                 <div class="col-md-6">
                    <div class="form-group">
                     <div class="col-md-12">
                       <div class="clearfix">
-                        <label class="control-label pull-left">Product Code</label>  
+                        <label class="control-label pull-left">Employee ID</label>  
                       </div>
                       <input type="text" name="product" class="form-control">  
                     </div>
@@ -43,51 +42,24 @@
                   <div class="form-group">
                     <div class="col-md-12">
                       <div class="clearfix">
-                        <label class="control-label pull-left">Product</label>  
-                        <div class="pull-right btn-xs btn btn-default" data-toggle="modal" data-target="#modal-add-product" data-backdrop="static" data-keyboard="false">
-                          <i class="fa fa-plus"></i> Add Product
-                        </div>
+                        <label class="control-label pull-left">Employee Name</label>  
                       </div>
                       <input type="text" name="product" class="form-control">  
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="col-md-12">
-                      <label class="control-label">Minimum Quantity</label>
-                      <input type="text" name="minimum-quantity" class="form-control">  
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="col-md-12">
-                      <label class="control-label">Maksimum Quantity</label>
-                      <input type="text" name="maximum-quantity" class="form-control">  
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-md-12">
-                      <label class="control-label">Quantity Multiple</label>
-                      <input type="text" name="quantity-multiple" class="form-control">  
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <div class="col-md-5">
-                      <label class="control-label">Lead Time</label>
-                      <input type="text" name="source" class="form-control">  
+                      <label class="control-label">Start Time</label>
+                      <input type="time" name="source" class="form-control">  
                     </div>
                     <div class="col-md-6">
-                      <label class="control-label">Lead Time</label>
-                      <select class="form-control">
-                        <option>Day(S) to Purchase</option>
-                      </select>
+                      <label class="control-label">Finish Time</label>
+                      <input type="time" class="form-control">
                     </div>
                   </div>                  
               </div>
-
-
               <div class="row">
                 <div class="col-md-12 clearfix">
                   <div class="btn btn-primary btn-pamindo pull-right">

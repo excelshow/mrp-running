@@ -43,8 +43,6 @@ function active_dashboard(){
 		echo '';
 	}
 }
-
-
 function sidebar_akses(){
 	$url = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 	$id = Auth::id();
@@ -77,6 +75,7 @@ function sidebar_akses(){
 	        echo '<a href="#">';
 	        echo '<i class="'.$icon.'"></i>';
 	        echo '<span>'.$display_name.'</span>';
+	        echo '<span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>';
 	        echo '</a>';
 	        echo '<ul class="treeview-menu">';
         	foreach($display_submenu as $result){

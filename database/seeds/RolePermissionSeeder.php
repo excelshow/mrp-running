@@ -12,9 +12,8 @@ class RolePermissionSeeder extends Seeder
      */
     public function run()
     {
-        //
         DB::table('role_has_permissions')->truncate();
-        for($i=1; $i<=16; $i++){
+        for($i=1; $i<=20; $i++){
         	$permissions = new Role_has_permissions;
         	$permissions->permission_id = $i;
         	$permissions->role_id = '1';
