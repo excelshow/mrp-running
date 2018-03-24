@@ -84,10 +84,20 @@
                         <option>Day(S) to Purchase</option>
                       </select>
                     </div>
+                    <div class="col-md-12">
+                       <div class="form-group">
+                          <div class="col-md-5">
+                            <label class="control-label">Routing</label>
+                            <select class="form-control">
+                             <option>routing 1</option>
+                              <option>routing 1</option>
+                        </select>
+                      </div>
+                      </div>
+                    </div>
                   </div>                  
               </div>
-
-
+            
               <div class="row">
                 <div class="col-md-12 clearfix">
                   <div class="btn btn-primary btn-pamindo pull-right">
@@ -101,9 +111,7 @@
       </div>
     </div>
     <div class="modal-container">
-     @include('admin.operations.components.modal-add-product')
-      @include('admin.operations.components.modal-add-bill-of-material')
-      @include('admin.operations.components.modal-add-responsible')
+     @include('admin.manufacturing.operations.components.modal-add-product')
     </div>
   </div>
 </section>

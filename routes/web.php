@@ -187,7 +187,6 @@ Route::group(['middleware' => 'auth'], function(){
     Route::put( 'update/{id}' , [ 'as' => 'product.update', 'uses' => 'Admin\ProductController@update' ]);
   });
 
-  Route::resource('logstok', 'Admin\LogStokController');
   Route::group( ['prefix' => 'logstok'], function()  {
     Route::get( 'getData', [ 'as' => 'logstok.getdata', 'uses' => 'Admin\LogStokController@getData' ] );
     Route::get( '/' , [ 'as' => 'logstok.index', 'uses' => 'Admin\LogStokController@index' ]);
@@ -195,5 +194,23 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post( 'store' , [ 'as' => 'logstok.store', 'uses' => 'Admin\LogStokController@store' ]);
     Route::get( 'edit/{id}' , [ 'as' => 'logstok.edit', 'uses' => 'Admin\LogStokController@edit' ]);
     Route::put( 'update/{id}' , [ 'as' => 'logstok.update', 'uses' => 'Admin\LogStokController@update' ]);
+  });
+
+  Route::group( ['prefix' => 'tools'], function()  {
+    Route::get( 'getData', [ 'as' => 'tools.getdata', 'uses' => 'Admin\Master\ToolsController@getData' ] );
+    Route::get( '/' , [ 'as' => 'tools.index', 'uses' => 'Admin\Master\ToolsController@index' ]);
+    Route::get( 'create' , [ 'as' => 'tools.create', 'uses' => 'Admin\Master\ToolsController@create' ]);
+    Route::post( 'store' , [ 'as' => 'tools.store', 'uses' => 'Admin\Master\ToolsController@store' ]);
+    Route::get( 'edit/{id}' , [ 'as' => 'tools.edit', 'uses' => 'Admin\Master\ToolsController@edit' ]);
+    Route::put( 'update/{id}' , [ 'as' => 'tools.update', 'uses' => 'Admin\Master\ToolsController@update' ]);
+  });
+  
+   Route::group( ['prefix' => 'workcenter'], function()  {
+    Route::get( 'getData', [ 'as' => 'workcenter.getdata', 'uses' => 'Admin\Master\WorkCenterController@getData' ] );
+    Route::get( '/' , [ 'as' => 'workcenter.index', 'uses' => 'Admin\Master\WorkCenterController@index' ]);
+    Route::get( 'create' , [ 'as' => 'workcenter.create', 'uses' => 'Admin\Master\WorkCenterController@create' ]);
+    Route::post( 'store' , [ 'as' => 'workcenter.store', 'uses' => 'Admin\Master\WorkCenterController@store' ]);
+    Route::get( 'edit/{id}' , [ 'as' => 'workcenter.edit', 'uses' => 'Admin\Master\WorkCenterController@edit' ]);
+    Route::put( 'update/{id}' , [ 'as' => 'workcenter.update', 'uses' => 'Admin\Master\WorkCenterController@update' ]);
   });
 });

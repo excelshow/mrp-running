@@ -19,7 +19,11 @@ class SubmenuSeeder extends Seeder
           (1, 4, 'Unit Master','unit'),
           (2, 4, 'Product Master','product'),
           (3, 4, 'Bill of Material','bom'),
-          (4, 4, 'Responsible','responsible')
+          (4, 4, 'Responsible','responsible'),
+          (5, 4, 'Tools','tools'),
+          (6, 4, 'Work Center','workcenter'),
+          (7, 4, 'Work Order Message','workordermessage'),
+          (8, 4, 'Routing','routing')
          ");
     }
 }

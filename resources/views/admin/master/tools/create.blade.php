@@ -5,16 +5,16 @@
 @section('content')
 <section class="content-header">
   <h1>
-    Responsible Operator
+    Tools
   </h1>
   <ol class="breadcrumb">
     <li>
       <a href="{{ url('home') }}"><i class="fa fa-dashboard"></i> Home</a>
     </li>
     <li>
-      <a href="{{ url('manufacturing') }}"><i class="fa fa-cubes"></i>Responsible Operator</a>
+      <a href="{{ url('manufacturing') }}"><i class="fa fa-cubes"></i>Tools</a>
     </li>
-    <li class="active">Create Bill of Material</li>
+    <li class="active">Tools</li>
   </ol>
 </section>
 <section class="content">
@@ -23,7 +23,7 @@
       <div class="col-md-12">
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">Responsible Operatorl</h3>
+            <h3 class="box-title">Tools</h3>
           </div>
           <div class="box-body">
 
@@ -34,7 +34,7 @@
                    <div class="form-group">
                     <div class="col-md-12">
                       <div class="clearfix">
-                        <label class="control-label pull-left">Employee ID</label>  
+                        <label class="control-label pull-left">Tools ID</label>  
                       </div>
                       <input type="text" name="product" class="form-control">  
                     </div>
@@ -42,23 +42,12 @@
                   <div class="form-group">
                     <div class="col-md-12">
                       <div class="clearfix">
-                        <label class="control-label pull-left">Employee Name</label>  
+                        <label class="control-label pull-left">Tools Name</label>  
                       </div>
                       <input type="text" name="product" class="form-control">  
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <div class="col-md-5">
-                      <label class="control-label">Start Time</label>
-                      <input type="time" name="source" class="form-control">  
-                    </div>
-                    <div class="col-md-6">
-                      <label class="control-label">Finish Time</label>
-                      <input type="time" class="form-control">
-                    </div>
-                  </div>                  
               </div>
               <div class="row">
                 <div class="col-md-12 clearfix">
