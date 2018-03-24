@@ -13,7 +13,7 @@ class PermissionsSeeder extends Seeder
     public function run()
     {
         DB::table('permissions')->truncate();
-    	$role = array('user','role','module','master','order','product','purchasing');
+    	$role = array('user','role','module','master');
     	$ability = array('view','create','edit','delete');
         //user permissions
         for($i=0; $i<count($role); $i++){

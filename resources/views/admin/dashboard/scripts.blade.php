@@ -51,7 +51,7 @@ Highcharts.chart('locationcount', {
         type: 'pie'
     },
     title: {
-        text: 'Location Count'
+        text: 'Day Production'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -73,12 +73,12 @@ Highcharts.chart('locationcount', {
     series: [{
         name: 'Brands',
         data: [
-            { name: 'Indonesia', y: 56.33 },
-            { name: 'Malaysia',y: 24.03 },
-            { name: 'Hongkong', y: 10.38 },
-            { name: 'Singapore', y: 4.77 },
-            { name: 'China', y: 0.91 },
-            { name: 'Thailand', y: 0.2 }
+            { name: 'Monday', y: 56.33 },
+            { name: 'Tuesday',y: 24.03 },
+            { name: 'Wednesday', y: 10.38 },
+            { name: 'Thursday', y: 4.77 },
+            { name: 'Friday', y: 0.91 },
+            { name: 'Saturday', y: 0.2 }
         ]
     }]
 });

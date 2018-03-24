@@ -17,9 +17,8 @@ class SubmenuSeeder extends Seeder
         INSERT INTO `submenu` (`id`, `menu_id`,`name`,`link`)
         VALUES
           (1, 4, 'Unit Master','unit'),
-          (2, 4, 'Warehouse Master','warehouse'),
-          (3, 4, 'Customer Master','customer'),
-          (4, 4, 'Terms And Condition','tnc')
+          (2, 4, 'Product Master','warehouse'),
+          (3, 4, 'Bill of Material','bom')
          ");
     }
 }
