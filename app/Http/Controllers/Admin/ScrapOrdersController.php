@@ -14,7 +14,7 @@ class ScrapOrdersController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.operations.scrap.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ScrapOrdersController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.operations.scrap.create');
     }
 
     /**

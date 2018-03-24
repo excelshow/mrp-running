@@ -1,16 +1,17 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Manufacturing Orders | ')
+@section('title', 'Manufacturing | ')
 
 @section('content')
 
   <section class="content-header">
     <h1>
-      Manufacturing Orders
+      Manufacturing
+      <small>Manufacturing Order</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active">Manufacturing Orders</li>
+      <li class="active">Manufacturing</li>
     </ol>
   </section>
 

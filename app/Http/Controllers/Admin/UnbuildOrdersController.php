@@ -14,7 +14,7 @@ class UnbuildOrdersController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.operations.unbuild.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class UnbuildOrdersController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.operations.unbuild.create');
     }
 
     /**
