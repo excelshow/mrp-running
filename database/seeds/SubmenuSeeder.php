@@ -18,7 +18,8 @@ class SubmenuSeeder extends Seeder
         VALUES
           (1, 4, 'Unit Master','unit'),
           (2, 4, 'Product Master','product'),
-          (3, 4, 'Bill of Material','bom')
+          (3, 4, 'Bill of Material','bom'),
+          (4, 4, 'Responsible','responsible')
          ");
     }
 }
