@@ -15,7 +15,7 @@
     });
 $(document).ready(function () {
     $('#checkBtn').click(function() {
-      checked = $("input[type=checkbox]:checked").length;
+      var checked = $("input[type=checkbox]:checked").length;
 
       if(!checked) {
         alert("You must check at least one checkbox.");
@@ -28,9 +28,9 @@ $(document).ready(function () {
 </script>
 <script language="JavaScript">
 function toggle(source) {
-	checkboxes = document.getElementsByName('permission[]');
+	var checkboxes = document.getElementsByName('permission[]');
 	for(var i=0, n=checkboxes.length;i<n;i++) {
 	checkboxes[i].checked = source.checked;
 	}
-}
+};
 </script>
