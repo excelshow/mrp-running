@@ -46,10 +46,11 @@
 
         </ul>
       </li>
-
+      
+      {{-- planning --}}
       <li class="treeview {{ Request::is('planning/*') || Request::is('planning/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
-          <i class="fa fa-cogs"></i> <span>Planning</span>
+          <i class="fa fa-location-arrow"></i> <span>Planning</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -74,7 +75,30 @@
 
         </ul>
       </li>
+      
+      {{-- inventory --}}
+      <li class="treeview {{ Request::is('inventory/operations') || Request::is('inventory/operations/*') || Request::is('inventory/operations/*/*') || Request::is('inventory/operations/*/*/*') || Request::is('inventory/operations/*/*/*/*') || Request::is('inventory/reporting') || Request::is('inventory/reporting/*') || Request::is('inventory/reporting/*/*') || Request::is('inventory/reporting/*/*/*') || Request::is('inventory/reporting/*/*/*/*') ? 'menu-open active' : '' }}">
+        <a href="#">
+          <i class="fa fa-archive"></i> <span>Inventory</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          
+          <li class="{{ Request::is('inventory/operations') || Request::is('inventory/operations/*') || Request::is('inventory/operations/*/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('inventory/operations') }}">
+              <i class="fa fa-cubes"></i> <span>Operations</span>
+            </a>
+          </li>
+          <li class="{{ Request::is('inventory/reporting') || Request::is('inventory/reporting/*') || Request::is('inventory/reporting/*/*') ? 'active' : '' }}" style="">
+            <a href="{{ url('inventory/reporting') }}">
+              <i class="fa fa-bar-chart"></i> <span>Reporting</span>
+            </a>
+          </li>
 
+        </ul>
+      </li>
     </ul>
   </section>
   <!-- /.sidebar -->

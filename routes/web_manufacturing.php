@@ -24,3 +24,22 @@ Route::group(['namespace'=>'Admin', 'prefix' => 'planning', 'as' => 'planning'],
 	Route::resource('maintenance-data-planning', 'MaintenanceDataPlanningController');
 	Route::resource('maintenance-data-work-center', 'MaintenanceDataWorkCenterController');
 });
+
+/* inventory */
+Route::group(['middleware' => 'auth', 'namespace'=>'Admin', 'prefix' => 'inventory', 'as' => 'inventory'], function(){
+
+	/* operations */
+	Route::group(['prefix' => 'operations', 'as' => 'operations'], function(){
+		Route::get('/', 'InventoryController@operations');
+		Route::resource('stock', 'InventoryStockController');
+		Route::resource('adjustments', 'InventoryAdjustmentsController');
+	});
+
+	/* reporting */
+	Route::group(['prefix' => 'reporting', 'as' => 'reporting'], function(){
+		Route::get('/', 'ReportingInventoryController@reporting');
+		Route::resource('inventory', 'ReportingInventoryController');
+		Route::resource('inventory-valuation', 'ReportingInventoryValuationController');
+		Route::resource('product-moves', 'ReportingInventoryProductMovesController');
+	});
+});
