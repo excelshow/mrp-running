@@ -236,6 +236,20 @@
       <li class="treeview">
         <a href="#">
           <i class="fa fa-laptop"></i>
+          <span>Inventory</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Incoming</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Out Going</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
           <span>Reporting</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
