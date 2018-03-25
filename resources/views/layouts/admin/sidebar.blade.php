@@ -99,6 +99,158 @@
 
         </ul>
       </li>
+
+      <div class="divider"></div>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Sales</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Customer Order</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Customer Contract</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-share"></i> <span>Master Data</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+
+          <li class="treeview">
+            <a href="#"><i class="fa fa-circle-o"></i> Master Material
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> Maintenance Data</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Approval</a></li>
+            </ul>
+          </li>
+
+          <li class="treeview">
+            <a href="#"><i class="fa fa-circle-o"></i> Bill Of Material
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> Maintenance Data</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Approval</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#"><i class="fa fa-circle-o"></i> Work Center</a></li>
+
+          <li class="treeview">
+            <a href="#"><i class="fa fa-circle-o"></i> Routing Master
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> Maintenance Data</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Approval</a></li>
+            </ul>
+          </li>
+
+          <li class="treeview">
+            <a href="#"><i class="fa fa-circle-o"></i> Data Reference
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> Unit Of Measure</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Currency</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Store Code</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Koding Code</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Labor Data</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Order / Operation Status Code </a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Part Class</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Sales Document Type</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Shop Code</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Work Order</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Work Order Create</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Work Create Release</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Work Order Print</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Work Order Confirmation</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Work Order Close</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Scheduling</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Run MRP</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Order Scheduling</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Operation Scheduling</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Capacity Planning</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Shop Floor Control</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Order Tracking</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Operation Tracking</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Reporting</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Work Center Performance</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Labor Performance</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Order Tracking</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Tracking Part</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Contract Delivery</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Monitoring Stock</a></li>
+        </ul>
+      </li>
+
     </ul>
   </section>
   <!-- /.sidebar -->
