@@ -24,7 +24,7 @@ class MaintenanceDataWorkCenterController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.planning.maintenance-data-work-center.create');
     }
 
     /**

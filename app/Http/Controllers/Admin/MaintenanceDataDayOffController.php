@@ -24,7 +24,7 @@ class MaintenanceDataDayOffController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.planning.maintenance-data-day-off.create');
     }
 
     /**

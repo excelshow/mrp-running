@@ -24,7 +24,7 @@ class MaintenanceDataPlanningController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.planning.maintenance-data-planning.create');
     }
 
     /**
