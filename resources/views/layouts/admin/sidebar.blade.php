@@ -66,7 +66,7 @@
               <i class="fa fa-refresh"></i> <span>Maintenace Data Planning</span>
             </a>
           </li>
-          <li class="{{ Request::is('planning/maintenance-data-work-center') || Request::is('planning/operations/*') ? 'active' : '' }}" style="">
+          <li class="{{ Request::is('planning/maintenance-data-work-center') || Request::is('planning/maintenance-data-work-center/*') ? 'active' : '' }}" style="">
             <a href="{{ url('planning/maintenance-data-work-center') }}">
               <i class="fa fa-refresh"></i> <span>Maintenace Data Work Center</span>
             </a>
