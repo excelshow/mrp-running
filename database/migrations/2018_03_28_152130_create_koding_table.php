@@ -15,6 +15,10 @@ class CreateKodingTable extends Migration
     {
         Schema::create('master-koding', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code')->nullable();
+            $table->string('description')->nullable();
+            $table->string('user_id_created')->nullable();
+            $table->string('user_id_updated')->nullable();
             $table->timestamps();
         });
     }

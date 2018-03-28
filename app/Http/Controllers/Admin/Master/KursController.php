@@ -48,15 +48,15 @@ class KursController extends Controller
             'buy' => 'required',
         ]);
 
-        $event = new MasterKurs();
-        $event->currency = $request->currency;
-        $event->date = $request->date;
-        $event->sell = $request->sell;
-        $event->middle = $request->middle;
-        $event->buy = $request->buy;
-        $event->user_id_created = Auth::user()->id;
-        $event->user_id_updated = Auth::user()->id;
-        $event->save();
+        $kur = new MasterKurs();
+        $kur->currency = $request->currency;
+        $kur->date = $request->date;
+        $kur->sell = $request->sell;
+        $kur->middle = $request->middle;
+        $kur->buy = $request->buy;
+        $kur->user_id_created = Auth::user()->id;
+        $kur->user_id_updated = Auth::user()->id;
+        $kur->save();
 
         Toastr::success('Kurs created.', 'Success');
         return redirect('master/reference/kurs');
@@ -103,15 +103,14 @@ class KursController extends Controller
             'buy' => 'required',
         ]);
 
-        $event = MasterKurs::find(decrypt($id));
-        $event->currency = $request->currency;
-        $event->date = $request->date;
-        $event->sell = $request->sell;
-        $event->middle = $request->middle;
-        $event->buy = $request->buy;
-        $event->user_id_created = Auth::user()->id;
-        $event->user_id_updated = Auth::user()->id;
-        $event->save();
+        $kur = MasterKurs::find(decrypt($id));
+        $kur->currency = $request->currency;
+        $kur->date = $request->date;
+        $kur->sell = $request->sell;
+        $kur->middle = $request->middle;
+        $kur->buy = $request->buy;
+        $kur->user_id_updated = Auth::user()->id;
+        $kur->save();
 
         Toastr::success('Kurs updated.', 'Success');
         return redirect('master/reference/kurs');
