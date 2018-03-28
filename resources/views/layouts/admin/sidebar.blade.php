@@ -23,8 +23,7 @@
 
       {{sidebar_akses()}}
   
-      {{-- manufacturing --}}
-      <li class="treeview {{ Request::is('manufacturing/operations') || Request::is('manufacturing/operations/*') || Request::is('manufacturing/operations/*/*') || Request::is('manufacturing/operations/*/*/*') || Request::is('manufacturing/operations/*/*/*/*') || Request::is('manufacturing/reporting') || Request::is('manufacturing/reporting/*') || Request::is('manufacturing/reporting/*/*') || Request::is('manufacturing/reporting/*/*/*') || Request::is('manufacturing/reporting/*/*/*/*') ? 'menu-open active' : '' }}">
+      {{-- <li class="treeview {{ Request::is('manufacturing/operations') || Request::is('manufacturing/operations/*') || Request::is('manufacturing/operations/*/*') || Request::is('manufacturing/operations/*/*/*') || Request::is('manufacturing/operations/*/*/*/*') || Request::is('manufacturing/reporting') || Request::is('manufacturing/reporting/*') || Request::is('manufacturing/reporting/*/*') || Request::is('manufacturing/reporting/*/*/*') || Request::is('manufacturing/reporting/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
           <i class="fa fa-cogs"></i> <span>Manufacturing</span>
           <span class="pull-right-container">
@@ -47,7 +46,6 @@
         </ul>
       </li>
       
-      {{-- planning --}}
       <li class="treeview {{ Request::is('planning/*') || Request::is('planning/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
           <i class="fa fa-location-arrow"></i> <span>Planning</span>
@@ -76,7 +74,6 @@
         </ul>
       </li>
       
-      {{-- inventory --}}
       <li class="treeview {{ Request::is('inventory/operations') || Request::is('inventory/operations/*') || Request::is('inventory/operations/*/*') || Request::is('inventory/operations/*/*/*') || Request::is('inventory/operations/*/*/*/*') || Request::is('inventory/reporting') || Request::is('inventory/reporting/*') || Request::is('inventory/reporting/*/*') || Request::is('inventory/reporting/*/*/*') || Request::is('inventory/reporting/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
           <i class="fa fa-archive"></i> <span>Inventory</span>
@@ -98,7 +95,7 @@
           </li>
 
         </ul>
-      </li>
+      </li> --}}
 
       <div class="divider"></div>
 
@@ -176,7 +173,7 @@
               <li><a href="#"><i class="fa fa-circle-o"></i> Store Code</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Koding Code</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Labor Data</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Order / Operation Status Code </a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Operation Status Code </a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Part Class</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Sales Document Type</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Shop Code</a></li>

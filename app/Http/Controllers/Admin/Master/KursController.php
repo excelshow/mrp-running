@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Master;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use Kamaln7\Toastr\Facades\Toastr;
 class KursController extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class KursController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +36,7 @@ class KursController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Toastr::success('New kurs created.', 'Success');
     }
 
     /**

@@ -24,6 +24,8 @@ Route::post('/send','MailController@send');
 Auth::routes();
 
 include('web_manufacturing.php');
+include('web_sales.php');
+include('web_master.php');
 
 Route::group(['middleware' => 'auth'], function(){
   
