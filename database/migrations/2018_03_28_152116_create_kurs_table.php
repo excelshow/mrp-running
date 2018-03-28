@@ -20,8 +20,8 @@ class CreateKursTable extends Migration
             $table->string('sell')->nullable();
             $table->string('middle')->nullable();
             $table->string('buy')->nullable();
-            $table->string('user_id_created')->nullable();
-            $table->string('user_id_updated')->nullable();
+            $table->integer('user_id_created')->nullable();
+            $table->integer('user_id_updated')->nullable();
             $table->timestamps();
         });
     }

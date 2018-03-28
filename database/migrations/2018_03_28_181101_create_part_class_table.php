@@ -18,8 +18,8 @@ class CreatePartClassTable extends Migration
             $table->string('code')->nullable();
             $table->string('name')->nullable();
             $table->string('classification')->nullable();
-            $table->string('user_id_created')->nullable();
-            $table->string('user_id_updated')->nullable();
+            $table->integer('user_id_created')->nullable();
+            $table->integer('user_id_updated')->nullable();
             $table->timestamps();
         });
     }
