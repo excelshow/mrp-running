@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin\Master;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\MasterKurs;
 use Kamaln7\Toastr\Facades\Toastr;
+use Auth;
 class KursController extends Controller
 {
     /**
@@ -15,7 +17,9 @@ class KursController extends Controller
      */
     public function index()
     {
-        
+        $kurs = MasterKurs::all();
+        $data['kurs'] = $kurs;
+        return view('admin.master.kurs.index', $data);
     }
 
     /**
@@ -25,7 +29,7 @@ class KursController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.master.kurs.create');
     }
 
     /**
@@ -36,7 +40,26 @@ class KursController extends Controller
      */
     public function store(Request $request)
     {
-        Toastr::success('New kurs created.', 'Success');
+        $this->validate($request, [
+            'currency' => 'required',
+            'date' => 'required',
+            'sell' => 'required',
+            'middle' => 'required',
+            'buy' => 'required',
+        ]);
+
+        $event = new MasterKurs();
+        $event->currency = $request->currency;
+        $event->date = $request->date;
+        $event->sell = $request->sell;
+        $event->middle = $request->middle;
+        $event->buy = $request->buy;
+        $event->user_id_created = Auth::user()->id;
+        $event->user_id_updated = Auth::user()->id;
+        $event->save();
+
+        Toastr::success('Kurs created.', 'Success');
+        return redirect('master/kurs');
     }
 
     /**
@@ -58,7 +81,9 @@ class KursController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kur = MasterKurs::find($id);
+        $data['kur'] = $kur;
+        return view('admin.master.kurs.edit', $data);
     }
 
     /**
@@ -70,7 +95,26 @@ class KursController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'currency' => 'required',
+            'date' => 'required',
+            'sell' => 'required',
+            'middle' => 'required',
+            'buy' => 'required',
+        ]);
+
+        $event = MasterKurs::find(decrypt($id));
+        $event->currency = $request->currency;
+        $event->date = $request->date;
+        $event->sell = $request->sell;
+        $event->middle = $request->middle;
+        $event->buy = $request->buy;
+        $event->user_id_created = Auth::user()->id;
+        $event->user_id_updated = Auth::user()->id;
+        $event->save();
+
+        Toastr::success('Kurs updated.', 'Success');
+        return redirect('master/kurs');
     }
 
     /**
@@ -81,6 +125,11 @@ class KursController extends Controller
      */
     public function destroy($id)
     {
-        //
+        MasterKurs::find(decrypt($id))->delete();
+        flash('Kurs Deleted.')->success();
+
+        $kurs = MasterKurs::all();
+        $data['kurs'] = $kurs;
+        return view('admin.master.kurs.index', $data);
     }
 }

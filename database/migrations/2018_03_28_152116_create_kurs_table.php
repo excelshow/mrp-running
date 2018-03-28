@@ -15,6 +15,13 @@ class CreateKursTable extends Migration
     {
         Schema::create('master-kurs', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('currency')->nullable();
+            $table->string('date')->nullable();
+            $table->string('sell')->nullable();
+            $table->string('middle')->nullable();
+            $table->string('buy')->nullable();
+            $table->string('user_id_created')->nullable();
+            $table->string('user_id_updated')->nullable();
             $table->timestamps();
         });
     }

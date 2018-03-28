@@ -158,7 +158,7 @@ Route::group(['middleware' => 'auth'], function(){
 
   Route::resource('reportorder', 'Admin\ReportOrderController');
   Route::group( ['prefix' => 'reportorder'], function()  {
-    Route::get('pdf', [ 'as' =>'reportorder.pdf','uses'=>'ReportOrderController@pdfview']);
+    Route::get('pdf', [ 'as' =>'reportorder.pdf','uses'=>'Admin\ReportOrderController@pdfview']);
     Route::get('getData', [ 'as' => 'reportorder.getdata', 'uses' => 'Admin\ReportOrderController@getData' ] );
     Route::get( '/' , [ 'as' => 'reportorder.index', 'uses' => 'Admin\ReportOrderController@index' ]);
     Route::get( 'create' , [ 'as' => 'reportorder.pdfview', 'uses' => 'Admin\ReportOrderController@create' ]);

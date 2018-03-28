@@ -13,6 +13,7 @@
 			"./public/themes/AdminLTE/2.4.2/plugins/iCheck/icheck.min.js",
 			"./public/themes/AdminLTE/2.4.2/dist/js/adminlte.min.js",
 			"./public/assets/vendor/toastr/toastr.min.js",
+			"./public/assets/vendor/bootstrap-sweetalert/sweetalert.min.js",
 			"./public/js/jquery.form-validator.min.js"
 		],
 		"styles": [
@@ -22,6 +23,8 @@
 			"./public/themes/AdminLTE/2.4.2/plugins/iCheck/all.css",
 			"./public/themes/AdminLTE/2.4.2/dist/css/AdminLTE.min.css",
 			"./public/assets/vendor/toastr/toastr.min.css",
+			"./public/assets/vendor/bootstrap-sweetalert/sweetalert.css",
+			"./public/assets/vendor/bootstrap-sweetalert/sweet-alert-animations.min.css",
 			"./public/themes/AdminLTE/2.4.2/dist/css/skins/_all-skins.min.css"
 		]
 	}
