@@ -10,7 +10,7 @@ use App\MasterKoding;
 use Kamaln7\Toastr\Facades\Toastr;
 use Auth;
 
-class SalesOrderController extends Controller
+class SalesPurchasesController extends Controller
 {
     /**
      * Display a listing of the resource.
