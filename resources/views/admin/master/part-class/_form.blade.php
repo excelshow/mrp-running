@@ -23,6 +23,17 @@
             @endif
         </div>
 
+        <div class="form-group {{ $errors->has('classification') ? ' has-error' : '' }}">
+            <label>Classification</label>
+            {!! Form::text('classification', null, [
+                'class'=>'form-control',
+                'required'=>'required',
+            ]) !!}
+            @if($errors->has('classification'))
+                <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('classification') }}</span>            
+            @endif
+        </div>
+
     </div>
 </div>
 
@@ -30,7 +41,7 @@
 	<div class="col-md-12">
 		<hr>
         <center>
-            <a href="{{ url('master/reference/stores') }}" class="btn btn-default">
+            <a href="{{ url('master/reference/part-class') }}" class="btn btn-default">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }}
             </a>
             <button type="submit" class="btn btn-danger btn-save">

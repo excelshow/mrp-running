@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
 
         <div class="form-group {{ $errors->has('code') ? ' has-error' : '' }}">
             <label>Code Number</label>

@@ -180,7 +180,9 @@
               </li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Labor Data</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Operation Status Code </a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Part Class</a></li>
+              <li class="{{ Request::is('master/reference/part-class') || Request::is('master/reference/part-class/*') || Request::is('master/reference/part-class/*/*') || Request::is('master/reference/part-class/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/part-class') }}"><i class="fa fa-circle-o"></i> Part Class</a>
+              </li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Sales Document Type</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Shop Code</a></li>
             </ul>

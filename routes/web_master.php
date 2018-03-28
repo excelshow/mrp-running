@@ -7,5 +7,6 @@ Route::group(['middleware' => 'auth', 'namespace'=>'Admin\Master', 'prefix' => '
 		Route::resource('kurs', 'KursController');
 		Route::resource('koding', 'KodingController');
 		Route::resource('stores', 'StoresController');
+		Route::resource('part-class', 'PartClassController');
 	});
 });
