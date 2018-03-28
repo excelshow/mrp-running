@@ -26,7 +26,7 @@
     </div>
     <div class="col-sm-6">
         <div class="form-group {{ $errors->has('sell') ? ' has-error' : '' }}">
-            <label>Sell</label>
+            <label>Sell (Price)</label>
             {!! Form::number('sell', null, [
                 'class'=>'form-control',
             ]) !!}
@@ -36,7 +36,7 @@
         </div>
 
         <div class="form-group {{ $errors->has('middle') ? ' has-error' : '' }}">
-            <label>Middle</label>
+            <label>Middle (Price)</label>
             {!! Form::number('middle', null, [
                 'class'=>'form-control',
             ]) !!}
@@ -46,7 +46,7 @@
         </div>
 
         <div class="form-group {{ $errors->has('buy') ? ' has-error' : '' }}">
-            <label>Buy</label>
+            <label>Buy (Price)</label>
             {!! Form::number('buy', null, [
                 'class'=>'form-control',
             ]) !!}
