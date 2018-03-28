@@ -114,7 +114,7 @@
         </ul>
       </li>
 
-      <li class="treeview">
+      <li class="treeview {{ Request::is('master/*') || Request::is('master/*/*') || Request::is('master/*/*/*') || Request::is('master/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
           <i class="fa fa-share"></i> <span>Master Data</span>
           <span class="pull-right-container">
@@ -161,7 +161,7 @@
             </ul>
           </li>
 
-          <li class="treeview">
+          <li class="treeview {{ Request::is('master/reference') || Request::is('master/reference/*') || Request::is('master/reference/*/*') || Request::is('master/reference/*/*/*') ? 'menu-open active' : '' }}">
             <a href="#"><i class="fa fa-circle-o"></i> Data Reference
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -169,7 +169,9 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="#"><i class="fa fa-circle-o"></i> Unit Of Measure</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Currency</a></li>
+              <li class="{{ Request::is('master/reference/kurs') || Request::is('master/reference/kurs/*') || Request::is('master/reference/kurs/*/*') || Request::is('master/reference/kurs/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/kurs/kurs') }}"><i class="fa fa-circle-o"></i> Currency</a>
+              </li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Store Code</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Koding Code</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Labor Data</a></li>

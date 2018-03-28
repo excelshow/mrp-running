@@ -20,7 +20,7 @@
         <h4>Edit</h4>
       </div>
       <div class="box-body">
-        {!! Form::model($kur, ['route' => ['master.kurs.update', encrypt($kur->id)],'method' =>'put','role'=>'form','files' => true])!!}
+        {!! Form::model($kur, ['route' => ['master.reference.kurs.update', encrypt($kur->id)],'method' =>'put','role'=>'form','files' => true])!!}
         {{ csrf_field() }}
         @include('admin.master.kurs._form')
         {!! Form::close() !!} 

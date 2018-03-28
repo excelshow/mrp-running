@@ -59,7 +59,7 @@ class KursController extends Controller
         $event->save();
 
         Toastr::success('Kurs created.', 'Success');
-        return redirect('master/kurs');
+        return redirect('master/reference/kurs');
     }
 
     /**
@@ -114,7 +114,7 @@ class KursController extends Controller
         $event->save();
 
         Toastr::success('Kurs updated.', 'Success');
-        return redirect('master/kurs');
+        return redirect('master/reference/kurs');
     }
 
     /**

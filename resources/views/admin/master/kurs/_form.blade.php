@@ -62,7 +62,7 @@
 	<div class="col-md-12">
 		<hr>
         <center>
-            <a href="{{ url('master/kurs') }}" class="btn btn-default">
+            <a href="{{ url('master/reference/kurs') }}" class="btn btn-default">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }}
             </a>
             <button type="submit" class="btn btn-danger btn-save">

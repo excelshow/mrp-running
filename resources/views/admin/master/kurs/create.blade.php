@@ -20,7 +20,7 @@
         <h4>Create</h4>
       </div>
       <div class="box-body">
-        {!! Form::open(['url' => 'master/kurs','files' => true, 'id'=>'form-create-event']) !!}
+        {!! Form::open(['url' => 'master/reference/kurs','files' => true, 'id'=>'form-create-event']) !!}
         {{ csrf_field() }}
         @include('admin.master.kurs._form')
         {!! Form::close() !!} 

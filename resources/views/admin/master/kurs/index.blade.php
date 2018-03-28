@@ -17,7 +17,7 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header clearfix">
-          <a href="{{ url('master/kurs/create') }}" class="btn btn-primary pull-right">Create</a>
+          <a href="{{ url('master/reference/kurs/create') }}" class="btn btn-primary pull-right">Create</a>
         </div>
         <div class="box-body">
           <table id="datatable-general" class="table table-bordered table-striped">
@@ -40,7 +40,7 @@
                   <td>{{ $item->buy }}</td>
                   <td>{{ $item->date }}</td>
                   <td>
-                    <a href="{{ route('master.kurs.edit', $item->id) }}" class="btn btn-info"">
+                    <a href="{{ route('master.reference.kurs.edit', $item->id) }}" class="btn btn-info"">
                       <span class="glyphicon glyphicon-edit"></span> Edit
                     </a>
                     <button class="btn btn-danger remove-item" data-id="{{ encrypt($item->id) }}">
@@ -91,7 +91,7 @@
           if (isConfirm) {
             $.ajax({
               type: "DELETE",
-              url: "{{ url('master/kurs') }}"+"/"+id,
+              url: "{{ url('master/reference/kurs') }}"+"/"+id,
               data: {_token: "{{ csrf_token() }}"},
               cache: false,
               success: function(data){
