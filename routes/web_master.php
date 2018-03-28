@@ -6,5 +6,6 @@ Route::group(['middleware' => 'auth', 'namespace'=>'Admin\Master', 'prefix' => '
 	Route::group(['prefix' => 'reference', 'as' => 'reference.'], function(){
 		Route::resource('kurs', 'KursController');
 		Route::resource('koding', 'KodingController');
+		Route::resource('stores', 'StoresController');
 	});
 });

@@ -172,7 +172,9 @@
               <li class="{{ Request::is('master/reference/kurs') || Request::is('master/reference/kurs/*') || Request::is('master/reference/kurs/*/*') || Request::is('master/reference/kurs/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/kurs') }}"><i class="fa fa-circle-o"></i> Currency</a>
               </li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Store Code</a></li>
+              <li class="{{ Request::is('master/reference/stores') || Request::is('master/reference/stores/*') || Request::is('master/reference/stores/*/*') || Request::is('master/reference/stores/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/stores') }}"><i class="fa fa-circle-o"></i> Store Code</a>
+              </li>
               <li class="{{ Request::is('master/reference/koding') || Request::is('master/reference/koding/*') || Request::is('master/reference/koding/*/*') || Request::is('master/reference/koding/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/koding') }}"><i class="fa fa-circle-o"></i> Koding Code</a>
               </li>
