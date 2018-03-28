@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
       $this->call(RolePermissionSeeder::class);
       $this->call(IconSeeder::class);
       $this->call(SubmenuSeeder::class);
+      $this->call(KursSeeder::class);
       
     }
 }
