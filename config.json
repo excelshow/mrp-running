@@ -12,6 +12,7 @@
 			"./public/themes/AdminLTE/2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js",
 			"./public/themes/AdminLTE/2.4.2/plugins/iCheck/icheck.min.js",
 			"./public/themes/AdminLTE/2.4.2/dist/js/adminlte.min.js",
+			"./public/assets/vendor/toastr/toastr.min.js",
 			"./public/js/jquery.form-validator.min.js"
 		],
 		"styles": [
@@ -20,6 +21,7 @@
 			"./public/themes/AdminLTE/2.4.2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css",
 			"./public/themes/AdminLTE/2.4.2/plugins/iCheck/all.css",
 			"./public/themes/AdminLTE/2.4.2/dist/css/AdminLTE.min.css",
+			"./public/assets/vendor/toastr/toastr.min.css",
 			"./public/themes/AdminLTE/2.4.2/dist/css/skins/_all-skins.min.css"
 		]
 	}

@@ -184,8 +184,7 @@ return [
         Yajra\DataTables\DataTablesServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
-
-
+        Kamaln7\Toastr\ToastrServiceProvider::class,
     ],
 
     /*
@@ -239,6 +238,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        'Toastr' => Kamaln7\Toastr\Facades\Toastr::class,
     ],
 
 ];

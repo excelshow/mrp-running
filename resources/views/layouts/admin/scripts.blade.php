@@ -1,4 +1,5 @@
 <script src="{{ mix('js/vendor.global.js') }}"></script>
+{!! Toastr::render() !!}
 
 <script>
     function onElementHeightChange(elm, callback) {
