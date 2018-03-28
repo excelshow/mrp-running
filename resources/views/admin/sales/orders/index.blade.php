@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Master Kurs | ')
+@section('title', 'Sales Customer Orders | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Master Kurs
+    Sales Customer Orders
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Master Kurs</li>
+    <li class="active">Sales Customer Orders</li>
   </ol>
 </section>
 <section class="content">
@@ -17,30 +17,30 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header clearfix">
-          <a href="{{ url('master/reference/kurs/create') }}" class="btn btn-primary pull-right">Create</a>
+          <a href="{{ url('sales/orders/create') }}" class="btn btn-primary pull-right">Create</a>
         </div>
         <div class="box-body">
           <table id="datatable-general" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>Currency</th>
-              <th>Sell</th>
-              <th>Middle</th>
-              <th>Buy</th>
-              <th>Date</th>
+              <th>Order Number</th>
+              <th>Inquiry Type</th>
+              <th>Customer Code</th>
+              <th>Customer Name</th>
+              <th>Created At</th>
               <th>Action</th>
             </tr>
             </thead>
             <tbody>
-              @foreach ($kurs as $item)
+              @foreach ($orders as $item)
                 <tr>
-                  <td>{{ $item->currency }}</td>
-                  <td>{{ $item->sell }}</td>
-                  <td>{{ $item->middle }}</td>
-                  <td>{{ $item->buy }}</td>
-                  <td>{{ $item->date }}</td>
+                  <td>{{ $item->order_number }}</td>
+                  <td>{{ $item->inquiry_type }}</td>
+                  <td>{{ $item->customer_code }}</td>
+                  <td>{{ $item->customer_name }}</td>
+                  <td>{{ $item->created_at }}</td>
                   <td>
-                    <a href="{{ route('master.reference.kurs.edit', $item->id) }}" class="btn btn-info"">
+                    <a href="{{ route('sales.orders.edit', $item->id) }}" class="btn btn-info"">
                       <span class="glyphicon glyphicon-edit"></span> Edit
                     </a>
                     <button class="btn btn-danger remove-item" data-id="{{ encrypt($item->id) }}">
@@ -52,10 +52,11 @@
             </tbody>
             <tfoot>
             <tr>
-              <th>Currency</th>
-              <th>Sell</th>
-              <th>Middle</th>
-              <th>Buy</th>
+              <th>Order Number</th>
+              <th>Inquiry Type</th>
+              <th>Customer Code</th>
+              <th>Customer Name</th>
+              <th>Created At</th>
               <th>Action</th>
             </tr>
             </tfoot>
@@ -91,7 +92,7 @@
           if (isConfirm) {
             $.ajax({
               type: "DELETE",
-              url: "{{ url('master/reference/kurs') }}"+"/"+id,
+              url: "{{ url('sales/orders') }}"+"/"+id,
               data: {_token: "{{ csrf_token() }}"},
               cache: false,
               success: function(data){

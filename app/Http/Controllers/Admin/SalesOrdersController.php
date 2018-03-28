@@ -19,8 +19,8 @@ class SalesOrdersController extends Controller
      */
     public function index()
     {
-        $kurs = MasterKurs::all();
-        $data['kurs'] = $kurs;
+        $orders = SalesOrder::all();
+        $data['orders'] = $orders;
         return view('admin.sales.orders.index', $data);
     }
 
@@ -46,25 +46,45 @@ class SalesOrdersController extends Controller
         $now = $mytime->toDateTimeString();
 
         $this->validate($request, [
-            'currency' => 'required',
-            'date' => 'required',
-            'sell' => 'required',
-            'middle' => 'required',
-            'buy' => 'required',
+            'order_number' => 'required',
+            'inquiry_type' => 'required',
+            'customer_code' => 'required',
+            'customer_name' => 'required',
         ]);
 
-        $kur = new MasterKurs();
-        $kur->currency = $request->currency;
-        $kur->date = $request->date;
-        $kur->sell = $request->sell;
-        $kur->middle = $request->middle;
-        $kur->buy = $request->buy;
-        $kur->user_id_created = Auth::user()->id;
-        $kur->user_id_updated = Auth::user()->id;
-        $kur->save();
+        $order = new SalesOrder();
+        $order->order_number = $request->order_number;
+        $order->inquiry_type = $request->inquiry_type;
+        $order->customer_code = $request->customer_code;
+        $order->customer_name = $request->customer_name;
+        $order->customer_address = $request->customer_address;
+        $order->customer_director = $request->customer_director;
+        $order->customer_postal = $request->customer_postal;
+        $order->total_price = $request->total_price;
+        $order->tax = $request->tax;
+        $order->discount = $request->discount;
+        $order->currency_id = $request->currency_id;
+        $order->price_date = $request->price_date;
+        $order->delivery_date = $request->delivery_date;
+        $order->delivery_plant = $request->delivery_plant;
+        $order->delivery_volume = $request->delivery_volume;
+        $order->contract_start = $request->contract_start;
+        $order->contract_end = $request->contract_end;
+        $order->document_type = $request->document_type;
+        $order->description = $request->description;
+        $order->is_approve = $request->is_approve;
+        $order->approval_date = $request->approval_date;
+        $order->status = $request->status;
+        $order->total_weight = $request->total_weight;
+        $order->weight_uom = $request->weight_uom;
+        $order->delivery_block = $request->delivery_block;
+        $order->bill_block = $request->bill_block;
+        $order->user_id_created = Auth::user()->id;
+        $order->user_id_updated = Auth::user()->id;
+        $order->save();
 
-        Toastr::success('Kurs created.', 'Success');
-        return redirect('master/reference/kurs');
+        Toastr::success('Order created.', 'Success');
+        return redirect('sales/orders');
     }
 
     /**
@@ -86,25 +106,9 @@ class SalesOrdersController extends Controller
      */
     public function edit($id)
     {
-        $this->validate($request, [
-            'currency' => 'required',
-            'date' => 'required',
-            'sell' => 'required',
-            'middle' => 'required',
-            'buy' => 'required',
-        ]);
-
-        $kur = MasterKurs::find(decrypt($id));
-        $kur->currency = $request->currency;
-        $kur->date = $request->date;
-        $kur->sell = $request->sell;
-        $kur->middle = $request->middle;
-        $kur->buy = $request->buy;
-        $kur->user_id_updated = Auth::user()->id;
-        $kur->save();
-
-        Toastr::success('Kurs updated.', 'Success');
-        return redirect('master/reference/kurs');
+        $order = SalesOrder::find($id);
+        $data['order'] = $order;
+        return view('admin.sales.orders.edit', $data);
     }
 
     /**
@@ -116,7 +120,45 @@ class SalesOrdersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'order_number' => 'required',
+            'inquiry_type' => 'required',
+            'customer_code' => 'required',
+            'customer_name' => 'required',
+        ]);
+
+        $order = SalesOrder::find(decrypt($id));
+        $order->order_number = $request->order_number;
+        $order->inquiry_type = $request->inquiry_type;
+        $order->customer_code = $request->customer_code;
+        $order->customer_name = $request->customer_name;
+        $order->customer_address = $request->customer_address;
+        $order->customer_director = $request->customer_director;
+        $order->customer_postal = $request->customer_postal;
+        $order->total_price = $request->total_price;
+        $order->tax = $request->tax;
+        $order->discount = $request->discount;
+        $order->currency_id = $request->currency_id;
+        $order->price_date = $request->price_date;
+        $order->delivery_date = $request->delivery_date;
+        $order->delivery_plant = $request->delivery_plant;
+        $order->delivery_volume = $request->delivery_volume;
+        $order->contract_start = $request->contract_start;
+        $order->contract_end = $request->contract_end;
+        $order->document_type = $request->document_type;
+        $order->description = $request->description;
+        $order->is_approve = $request->is_approve;
+        $order->approval_date = $request->approval_date;
+        $order->status = $request->status;
+        $order->total_weight = $request->total_weight;
+        $order->weight_uom = $request->weight_uom;
+        $order->delivery_block = $request->delivery_block;
+        $order->bill_block = $request->bill_block;
+        $order->user_id_updated = Auth::user()->id;
+        $order->save();
+
+        Toastr::success('Order updated.', 'Success');
+        return redirect('sales/orders');
     }
 
     /**
@@ -127,11 +169,11 @@ class SalesOrdersController extends Controller
      */
     public function destroy($id)
     {
-        MasterKurs::find(decrypt($id))->delete();
-        flash('Kurs Deleted.')->success();
+        SalesOrder::find(decrypt($id))->delete();
+        flash('Order Deleted.')->success();
 
-        $kurs = MasterKurs::all();
-        $data['kurs'] = $kurs;
-        return view('admin.master.kurs.index', $data);
+        $orders = SalesOrder::all();
+        $data['orders'] = $orders;
+        return view('admin.sales.orders.index', $data);
     }
 }

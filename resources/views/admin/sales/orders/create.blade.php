@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Create Kurs | ')
+@section('title', 'Create Customer Order | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Create Kurs
+    Create Customer Order
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Create Kurs</li>
+    <li class="active">Create Customer Order</li>
   </ol>
 </section>
 <section class="content">
@@ -20,9 +20,9 @@
         <h4>Create</h4>
       </div>
       <div class="box-body">
-        {!! Form::open(['url' => 'master/reference/kurs','files' => true, 'id'=>'form-create-event']) !!}
+        {!! Form::open(['url' => 'sales/orders','files' => true, 'id'=>'form-create-event']) !!}
         {{ csrf_field() }}
-        @include('admin.master.kurs._form')
+        @include('admin.sales.orders._form')
         {!! Form::close() !!} 
       </div>
        

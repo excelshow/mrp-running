@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-6">
-        {{-- <div class="form-group {{ $errors->has('user_id') ? ' has-error' : '' }}">
+        <div class="form-group {{ $errors->has('user_id') ? ' has-error' : '' }}">
             {!! Form::select('user_id', [
                 '' => ''
                 ] + App\User::where('role','client')->pluck('first_name','id')->all(), null, ['class'=>'form-control']); !!}
@@ -11,7 +11,7 @@
             @if($errors->has('user_id'))
                 <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('user_id') }}</span>            
             @endif
-        </div> --}}
+        </div>
 
         <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
             <label>{{ __('Name') }}</label>
