@@ -108,7 +108,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li class="{{ Request::is('sales/orders/*') || Request::is('sales/orders/*/*') || Request::is('sales/orders/*/*/*') || Request::is('sales/orders/*/*/*/*') ? 'menu-open active' : '' }}">
+          <li class="{{ Request::is('sales/orders') || Request::is('sales/orders/*/*') || Request::is('sales/orders/*/*/*') || Request::is('sales/orders/*/*/*/*') ? 'menu-open active' : '' }}">
             <a href="{{ url('sales/orders') }}"><i class="fa fa-circle-o"></i> Customer Order</a>
           </li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Customer Contract</a></li>
