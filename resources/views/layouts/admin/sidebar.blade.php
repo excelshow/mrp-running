@@ -183,16 +183,20 @@
             <ul class="treeview-menu">
               <li><a href="#"><i class="fa fa-circle-o"></i> Unit Of Measure</a></li>
               <li class="{{ Request::is('master/reference/kurs') || Request::is('master/reference/kurs/*') || Request::is('master/reference/kurs/*/*') || Request::is('master/reference/kurs/*/*/*') ? 'active' : '' }}">
-                <a href="{{ url('master/reference/kurs') }}"><i class="fa fa-circle-o"></i> Currency</a>
+                <a href="{{ url('master/reference/kurs') }}"><i class="fa fa-circle-o"></i> Kurs (Currency)</a>
               </li>
               <li class="{{ Request::is('master/reference/stores') || Request::is('master/reference/stores/*') || Request::is('master/reference/stores/*/*') || Request::is('master/reference/stores/*/*/*') ? 'active' : '' }}">
-                <a href="{{ url('master/reference/stores') }}"><i class="fa fa-circle-o"></i> Store Code</a>
+                <a href="{{ url('master/reference/stores') }}"><i class="fa fa-circle-o"></i> Stores Code</a>
               </li>
               <li class="{{ Request::is('master/reference/koding') || Request::is('master/reference/koding/*') || Request::is('master/reference/koding/*/*') || Request::is('master/reference/koding/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/koding') }}"><i class="fa fa-circle-o"></i> Koding Code</a>
               </li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Labor Data</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Machine Data</a></li>
+              <li class="{{ Request::is('master/reference/labors') || Request::is('master/reference/labors/*') || Request::is('master/reference/labors/*/*') || Request::is('master/reference/labors/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/labors') }}"><i class="fa fa-circle-o"></i> Labors Data</a>
+              </li>
+              <li class="{{ Request::is('master/reference/machines') || Request::is('master/reference/machines/*') || Request::is('master/reference/machines/*/*') || Request::is('master/reference/machines/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/machines') }}"><i class="fa fa-circle-o"></i> Machines Data</a>
+              </li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Operation Status Code </a></li>
               <li class="{{ Request::is('master/reference/part-class') || Request::is('master/reference/part-class/*') || Request::is('master/reference/part-class/*/*') || Request::is('master/reference/part-class/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/part-class') }}"><i class="fa fa-circle-o"></i> Part Class</a>
