@@ -128,15 +128,19 @@
         </a>
         <ul class="treeview-menu">
 
-          <li class="treeview">
+          <li class="treeview {{ Request::is('master/master-materials') || Request::is('master/master-materials/*') || Request::is('master/master-materials/*/*') || Request::is('master/master-materials/*/*/*') ? 'menu-open active' : '' }}">
             <a href="#"><i class="fa fa-circle-o"></i> Master Material
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Maintenance Data</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Approval</a></li>
+              <li class="{{ Request::is('master/master-materials/maintenance-data') || Request::is('master/master-materials/maintenance-data/*') || Request::is('master/master-materials/maintenance-data/*/*') || Request::is('master/master-materials/maintenance-data/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/master-materials/maintenance-data') }}"><i class="fa fa-circle-o"></i> Maintenance Data</a>
+              </li>
+              <li class="{{ Request::is('master/master-materials/approval') || Request::is('master/master-materials/approval/*') || Request::is('master/master-materials/approval/*/*') || Request::is('master/master-materials/approval/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/master-materials/approval') }}"><i class="fa fa-circle-o"></i> Approval</a>
+              </li>
             </ul>
           </li>
 
