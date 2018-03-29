@@ -62,7 +62,7 @@ class MasterMaterialController extends Controller
         $material->quantity_part_length = $request->quantity_part_length;
         $material->quantity_part_diameter = $request->quantity_part_diameter;
         $material->quantity_part_weight = $request->quantity_part_weight;
-        $material->dimesion_uom = $request->dimesion_uom;
+        $material->dimension_uom = $request->dimension_uom;
         $material->weight_uom = $request->weight_uom;
         $material->material_specification = $request->material_specification;
         $material->quantity_part_material = $request->quantity_part_material;
@@ -132,7 +132,7 @@ class MasterMaterialController extends Controller
         $material->quantity_part_length = $request->quantity_part_length;
         $material->quantity_part_diameter = $request->quantity_part_diameter;
         $material->quantity_part_weight = $request->quantity_part_weight;
-        $material->dimesion_uom = $request->dimesion_uom;
+        $material->dimension_uom = $request->dimension_uom;
         $material->weight_uom = $request->weight_uom;
         $material->material_specification = $request->material_specification;
         $material->quantity_part_material = $request->quantity_part_material;
