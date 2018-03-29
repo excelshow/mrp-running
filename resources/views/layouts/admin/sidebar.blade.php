@@ -192,6 +192,7 @@
                 <a href="{{ url('master/reference/koding') }}"><i class="fa fa-circle-o"></i> Koding Code</a>
               </li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Labor Data</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Machine Data</a></li>
               <li><a href="#"><i class="fa fa-circle-o"></i> Operation Status Code </a></li>
               <li class="{{ Request::is('master/reference/part-class') || Request::is('master/reference/part-class/*') || Request::is('master/reference/part-class/*/*') || Request::is('master/reference/part-class/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/part-class') }}"><i class="fa fa-circle-o"></i> Part Class</a>
