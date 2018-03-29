@@ -99,6 +99,18 @@
             @endif
         </div>
 
+        <div class="form-group {{ $errors->has('status') ? ' has-error' : '' }}">
+            <label>Status</label>
+            {!! Form::select('status', [
+                'open' => 'Open',
+                'close' => 'Close',
+                'all' => 'All'
+                ] , null, ['class'=>'form-control']); !!}
+            @if($errors->has('status'))
+                <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('status') }}</span>            
+            @endif
+        </div>
+
     </div>
     
 </div>
