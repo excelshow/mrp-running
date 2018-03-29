@@ -42,7 +42,7 @@
                 'class'=>'form-control',
             ]) !!}
             @if($errors->has('customer_director'))
-                <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('customer_address') }}</span>            
+                <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('customer_director') }}</span>            
             @endif
         </div>
 
@@ -266,7 +266,7 @@
 	<div class="col-md-12">
 		<hr>
         <center>
-            <a href="{{ url('master/reference/kurs') }}" class="btn btn-default">
+            <a href="{{ url('sales/orders') }}" class="btn btn-default">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }}
             </a>
             <button type="submit" class="btn btn-danger btn-save">

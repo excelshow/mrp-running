@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Edit Sales Customer Order | ')
+@section('title', 'Edit Sales Contract | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Edit Sales Customer Order
+    Edit Sales Contract
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Edit Sales Customer Order</li>
+    <li class="active">Edit Sales Contract</li>
   </ol>
 </section>
 <section class="content">
@@ -20,9 +20,9 @@
         <h4>Edit</h4>
       </div>
       <div class="box-body">
-        {!! Form::model($order, ['route' => ['sales.orders.update', encrypt($order->id)],'method' =>'put','role'=>'form','files' => true])!!}
+        {!! Form::model($contract, ['route' => ['sales.contracts.update', encrypt($contract->id)],'method' =>'put','role'=>'form','files' => true])!!}
         {{ csrf_field() }}
-        @include('admin.sales.orders._form')
+        @include('admin.sales.contracts._form')
         {!! Form::close() !!} 
       </div>
        

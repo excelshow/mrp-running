@@ -112,7 +112,9 @@
           <li class="{{ Request::is('sales/orders') || Request::is('sales/orders/*/*') || Request::is('sales/orders/*/*/*') || Request::is('sales/orders/*/*/*/*') ? 'menu-open active' : '' }}">
             <a href="{{ url('sales/orders') }}"><i class="fa fa-circle-o"></i> Customer Order</a>
           </li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Customer Contract</a></li>
+          <li class="{{ Request::is('sales/contracts') || Request::is('sales/contracts/*/*') || Request::is('sales/contracts/*/*/*') || Request::is('sales/contracts/*/*/*/*') ? 'menu-open active' : '' }}">
+            <a href="{{ url('sales/contracts') }}"><i class="fa fa-circle-o"></i> Customer Contract</a>
+          </li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
         </ul>
       </li>
