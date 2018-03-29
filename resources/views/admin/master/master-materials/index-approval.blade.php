@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Master Master Materials | ')
+@section('title', 'Master Master Materials Approval | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Master Master Materials
+    Master Master Materials Approval
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Master Master Materials</li>
+    <li class="active">Master Master Materials Approval</li>
   </ol>
 </section>
 <section class="content">
