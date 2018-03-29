@@ -5,7 +5,7 @@
 @section('content')
 <section class="content-header">
   <h1>
-   profile
+   Profile
     <small></small>
   </h1>
   <ol class="breadcrumb">
@@ -49,7 +49,7 @@
                   </div>
                 </div>
               <div class="form-group">
-                <div class="col-md-4">
+                <div class="col-md-5">
                   <label for="password">Password</label>
                   <input type="password" data-validation="length password" data-validation-length="min8" class="form-control" id="password" name="password" value="">
                 </div>
