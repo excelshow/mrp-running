@@ -10,6 +10,14 @@ Route::group(['middleware' => 'auth', 'namespace'=>'Admin\Master', 'prefix' => '
 		Route::resource('maintenance-data', 'MasterMaterialController');
 	});
 
+	/* master material */
+	Route::group(['prefix' => 'bill-of-materials', 'as' => 'bill-of-materials.'], function(){
+		Route::get('approval', 'BillOfMaterialController@approval');
+		Route::get('approval/{id}', 'BillOfMaterialController@editApproval')->name('approval.edit');
+		Route::put('approval/{id}', 'BillOfMaterialController@updateApproval')->name('approval.update');
+		Route::resource('maintenance-data', 'BillOfMaterialController');
+	});
+
 	/* data reference */
 	Route::group(['prefix' => 'reference', 'as' => 'reference.'], function(){
 		Route::resource('kurs', 'KursController');
