@@ -20,9 +20,7 @@
 </a>
 @endif
 @if( isset( $delete_url ) )
-<a href="javascript:void(0)" class="{!! empty( $delete_url ) ? 'disabled' : '' !!}" title="Delete" data-href="{!! empty( $delete_url ) ? 'javascript:void(0)' : $delete_url !!}" data-button="delete" id="deleteModal">
-	<button type="button" class="btn btn-icon btn-danger" style="width: 40px"><i class="fa fa-trash" aria-hidden="true"></i></button>
-</a>
+	<button class="btn btn-danger remove-item"  data-id="{{$id}}" type="button" class="btn btn-icon btn-danger" style="width: 40px"><i class="fa fa-trash" aria-hidden="true"></i></button>
 @endif
 @if( isset( $active_url ) )
 <a href="javascript:void(0)" class="{!! empty( $active_url ) ? 'disabled' : '' !!}" title="Active" data-href="{!! empty( $active_url ) ? 'javascript:void(0)' : $active_url !!}" data-button="delete" id="activeModal">

@@ -9,6 +9,7 @@
         <!-- Fonts -->
 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="{{asset('animate.css')}}"
         <!-- Styles -->
   
         <style>
@@ -76,10 +77,20 @@
                 </div>
             @endif
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md tlt">
                    PT PAMINDO TIGA T
                 </div>
             </div>
         </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="{{asset('jquery.fittext.js')}}"></script>
+        <script src="{{asset('jquery.lettering.js')}}"></script>
+        <script src="{{asset('jquery.textillate.js')}}"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('.tlt').textillate({ in: { effect: 'rollIn' } });
+            })
+        </script>
     </body>
 </html>

@@ -206,7 +206,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Create Order</a></li>
+          <li><a href="/work-order"><i class="fa fa-circle-o"></i> Create Order</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Release Order</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Print Order</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Scheduling</a></li>

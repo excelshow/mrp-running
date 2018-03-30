@@ -13,7 +13,7 @@
                     <form id="destroy" action="" method="post" style="display: inline" >
                       {{csrf_field()}}
                       {{method_field('DELETE')}}  
-                      <button class="btn btn-danger">Delete</button>
+                      <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
             </div>
         </div>

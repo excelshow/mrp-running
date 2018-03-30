@@ -225,4 +225,13 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get( 'edit/{id}' , [ 'as' => 'routing.edit', 'uses' => 'Admin\Master\RoutingController@edit' ]);
     Route::put( 'update/{id}' , [ 'as' => 'routing.update', 'uses' => 'Admin\Master\RoutingController@update' ]);
   });
+   Route::group( ['prefix' => 'work-order'], function()  {
+    Route::get( 'getData', [ 'as' => 'work-order.getdata', 'uses' => 'Admin\WorkOrderController@getData' ] );
+    Route::get( '/' , [ 'as' => 'work-order.index', 'uses' => 'Admin\WorkOrderController@index' ]);
+    Route::get( 'create' , [ 'as' => 'work-order.create', 'uses' => 'Admin\WorkOrderController@create' ]);
+    Route::post( 'store' , [ 'as' => 'work-order.store', 'uses' => 'Admin\WorkOrderController@store' ]);
+    Route::get( 'edit/{id}' , [ 'as' => 'work-order.edit', 'uses' => 'Admin\WorkOrderController@edit' ]);
+    Route::put( 'update/{id}' , [ 'as' => 'work-order.update', 'uses' => 'Admin\WorkOrderController@update' ]);
+    Route::post( 'delete/{id}' , [ 'as' => 'work-order.destroy', 'uses' => 'Admin\WorkOrderController@destroy' ]);
+  });
 });
