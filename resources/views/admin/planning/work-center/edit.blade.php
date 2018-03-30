@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Edit Machine | ')
+@section('title', 'Edit Work Center | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Edit Machine
+    Edit Work Center
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Edit Machine</li>
+    <li class="active">Edit Work Center</li>
   </ol>
 </section>
 <section class="content">
@@ -20,9 +20,9 @@
         <h4>Edit</h4>
       </div>
       <div class="box-body">
-        {!! Form::model($machine, ['route' => ['planning.machines.update', encrypt($machine->id)],'method' =>'put','role'=>'form','files' => true])!!}
+        {!! Form::model($work, ['route' => ['planning.work-center.update', encrypt($work->id)],'method' =>'put','role'=>'form','files' => true])!!}
         {{ csrf_field() }}
-        @include('admin.planning.machines._form')
+        @include('admin.planning.work-center._form')
         {!! Form::close() !!} 
       </div>
        

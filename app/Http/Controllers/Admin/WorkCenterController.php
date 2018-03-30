@@ -42,13 +42,36 @@ class WorkCenterController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'employee_id' => 'required',
-            'name' => 'required',
+            'number' => 'required',
+            'machine_id' => 'required',
+            'asset_number' => 'required',
         ]);
 
         $work = new WorkCenter();
-        $work->employee_id = $request->employee_id;
-        $work->name = $request->name;
+        $work->number = $request->number;
+        $work->machine_id = $request->machine_id;
+        $work->asset_number = $request->asset_number;
+        $work->description = $request->description;
+        $work->category = $request->category;
+        $work->location = $request->location;
+        $work->utilization = $request->utilization;
+        $work->total_shift = $request->total_shift;
+        $work->queue_time = $request->queue_time;
+        $work->setup_time = $request->setup_time;
+        $work->execution_time = $request->execution_time;
+        $work->capacity_time = $request->capacity_time;
+        $work->start_time_1 = $request->start_time_1;
+        $work->stop_time_1 = $request->stop_time_1;
+        $work->brake_time_1 = $request->brake_time_1;
+        $work->start_time_2 = $request->start_time_2;
+        $work->stop_time_2 = $request->stop_time_2;
+        $work->brake_time_2 = $request->brake_time_2;
+        $work->start_time_3 = $request->start_time_3;
+        $work->stop_time_3 = $request->stop_time_3;
+        $work->brake_time_3 = $request->brake_time_3;
+        $work->total_machine = $request->total_machine;
+        $work->total_labor = $request->total_labor;
+        $work->processing = $request->processing;
         $work->user_id_created = Auth::user()->id;
         $work->user_id_updated = Auth::user()->id;
         $work->save();
@@ -91,13 +114,36 @@ class WorkCenterController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'employee_id' => 'required',
-            'name' => 'required',
+            'number' => 'required',
+            'machine_id' => 'required',
+            'asset_number' => 'required',
         ]);
 
         $work = WorkCenter::find(decrypt($id));
-        $work->employee_id = $request->employee_id;
-        $work->name = $request->name;
+        $work->number = $request->number;
+        $work->machine_id = $request->machine_id;
+        $work->asset_number = $request->asset_number;
+        $work->description = $request->description;
+        $work->category = $request->category;
+        $work->location = $request->location;
+        $work->utilization = $request->utilization;
+        $work->total_shift = $request->total_shift;
+        $work->queue_time = $request->queue_time;
+        $work->setup_time = $request->setup_time;
+        $work->execution_time = $request->execution_time;
+        $work->capacity_time = $request->capacity_time;
+        $work->start_time_1 = $request->start_time_1;
+        $work->stop_time_1 = $request->stop_time_1;
+        $work->brake_time_1 = $request->brake_time_1;
+        $work->start_time_2 = $request->start_time_2;
+        $work->stop_time_2 = $request->stop_time_2;
+        $work->brake_time_2 = $request->brake_time_2;
+        $work->start_time_3 = $request->start_time_3;
+        $work->stop_time_3 = $request->stop_time_3;
+        $work->brake_time_3 = $request->brake_time_3;
+        $work->total_machine = $request->total_machine;
+        $work->total_labor = $request->total_labor;
+        $work->processing = $request->processing;
         $work->user_id_updated = Auth::user()->id;
         $work->save();
 

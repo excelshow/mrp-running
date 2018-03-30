@@ -24,11 +24,11 @@
           <table id="datatable-general" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>Machine Number</th>
-              <th>Name</th>
-              <th>Total Machine</th>
-              <th>Total Shift</th>
-              <th>Leader</th>
+              <th>Work Center Number</th>
+              <th>Machine ID</th>
+              <th>Asset Number</th>
+              <th>Location</th>
+              <th>Utilization</th>
               <th>Created At</th>
               <th>Action</th>
             </tr>
@@ -37,10 +37,10 @@
               @foreach ($works as $item)
                 <tr>
                   <td>{{ $item->number }}</td>
-                  <td>{{ $item->name }}</td>
-                  <td>{{ $item->total_machine }}</td>
-                  <td>{{ $item->total_shift }}</td>
-                  <td>{{ $item->labor->name }}</td>
+                  <td>{{ $item->machine_id }}</td>
+                  <td>{{ $item->asset_number }}</td>
+                  <td>{{ $item->location }}</td>
+                  <td>{{ $item->utilization }}</td>
                   <td>{{ $item->created_at }}</td>
                   <td>
                     <a href="{{ route('planning.work-center.edit', $item->id) }}" class="btn btn-info"">
@@ -55,13 +55,12 @@
             </tbody>
             <tfoot>
             <tr>
-              <th>Machine Number</th>
-              <th>Name</th>
-              <th>Total Machine</th>
-              <th>Total Shift</th>
-              <th>Leader</th>
+              <th>Work Center Number</th>
+              <th>Machine ID</th>
+              <th>Asset Number</th>
+              <th>Location</th>
+              <th>Utilization</th>
               <th>Created At</th>
-              <th>Action</th>
             </tr>
             </tfoot>
           </table>
