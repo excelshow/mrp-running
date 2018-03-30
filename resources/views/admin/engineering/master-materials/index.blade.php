@@ -35,10 +35,10 @@
             <tbody>
               @foreach ($materials as $item)
                 <tr>
-                  <td height="500">
+                  <td>
                     @php
                       // echo DNS1D::getBarcodeHTML($item->id, "C39");
-                      echo '<img src="data:image/png;base64,' . DNS1D::getBarcodePNG("4", "C39+",3,33,array(1,1,1), true) . '"    />';
+                      echo '<img src="data:image/png;base64,' . DNS1D::getBarcodePNG("4", "C39+", 3, 50, array(15,16,18), true) . '"    />';
                       // echo '<img src="' . DNS1D::getBarcodePNG("4", "C39+",3,33,array(1,1,1), true) . '" alt="barcode"   />';
                       // echo DNS1D::getBarcodeSVG("4445645656", "PHARMA2T",3,33,"green", true);
                       // echo DNS1D::getBarcodeHTML("4445645656", "PHARMA2T",3,33,"green", true);
