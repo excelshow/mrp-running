@@ -26,7 +26,7 @@
               <th>Barcode</th>
               <th>Number</th>
               <th>Name</th>
-              <th>Material ID</th>
+              <th>Material Code ID</th>
               <th>Created At</th>
               <th>Updated At</th>
               <th>Action</th>
