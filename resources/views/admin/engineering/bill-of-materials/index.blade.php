@@ -24,6 +24,7 @@
             <thead>
             <tr>
               <th>Master Material ID</th>
+              <th>Barcode</th>
               <th>Part Level</th>
               <th>Part Number</th>
               <th>Part Name</th>
@@ -36,6 +37,11 @@
               @foreach ($materials as $item)
                 <tr>
                   <td>{{ $item->master_material_id }}</td>
+                  <td>
+                    @php
+                      echo DNS1D::getBarcodeHTML($item->id, "C39");
+                    @endphp
+                  </td>
                   <td>{{ $item->part_level }}</td>
                   <td>{{ $item->part_number }}</td>
                   <td>{{ $item->part_name }}</td>
@@ -55,6 +61,7 @@
             <tfoot>
             <tr>
               <th>Master Material ID</th>
+              <th>Barcode</th>
               <th>Part Level</th>
               <th>Part Number</th>
               <th>Part Name</th>
@@ -77,6 +84,13 @@
   <script type="text/javascript">
     jQuery( document ).ready(function() {
       var data = $( '#datatable-general' ).DataTable({
+        responsive: true,
+        bPaginate: true,
+        lengthMenu: [25, 50, 100, 500, 1000],
+        dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
       });
 
       $(document).on('click', '.remove-item', function(e){

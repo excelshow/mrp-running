@@ -23,8 +23,9 @@
           <table id="datatable-general" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>Material Number</th>
-              <th>Material Name</th>
+              <th>Barcode</th>
+              <th>Number</th>
+              <th>Name</th>
               <th>Material ID</th>
               <th>Created At</th>
               <th>Updated At</th>
@@ -34,6 +35,11 @@
             <tbody>
               @foreach ($materials as $item)
                 <tr>
+                  <td>
+                    @php
+                      echo DNS1D::getBarcodeHTML($item->id, "C39");
+                    @endphp
+                  </td>
                   <td>{{ $item->material_number }}</td>
                   <td>{{ $item->material_name }}</td>
                   <td>{{ $item->material_id }}</td>
@@ -52,6 +58,7 @@
             </tbody>
             <tfoot>
             <tr>
+              <th>Material Number</th>
               <th>Material Number</th>
               <th>Material Name</th>
               <th>Material ID</th>
