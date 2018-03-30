@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class InventoryStockController extends Controller
+class WorkCenterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class InventoryStockController extends Controller
      */
     public function index()
     {
-        return view('admin.inventory.operations.stock.index');
+        //
     }
 
     /**
@@ -24,7 +24,7 @@ class InventoryStockController extends Controller
      */
     public function create()
     {
-        return view('admin.inventory.operations.stock.create');
+        //
     }
 
     /**

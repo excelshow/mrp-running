@@ -189,7 +189,9 @@
             <a href="{{ url('planning/machines') }}"><i class="fa fa-circle-o"></i> Machines Data</a>
           </li>
 
-          <li><a href="#"><i class="fa fa-circle-o"></i> Work Center</a></li>
+          <li class="{{ Request::is('planning/work-center') || Request::is('planning/work-center/*') || Request::is('planning/work-center/*/*') || Request::is('planning/work-center/*/*/*') ? 'active' : '' }}">
+            <a href="{{ url('planning/work-center') }}"><i class="fa fa-circle-o"></i> Work Center</a>
+          </li>
           <li><a href="#"><i class="fa fa-circle-o"></i> MRP Running</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Capacity Planning</a></li>
         </ul>
