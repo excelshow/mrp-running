@@ -1,6 +1,6 @@
 <div class="wrapper">
 <header class="main-header">
-  <a href="{{ config('app.url') }}" class="logo" style="background-color:#dedfe0" >
+  <a href="{{ url('home') }}" class="logo" style="background-color:#dedfe0" >
     <span class="logo-mini"><b>ERP</b></span>
     <span class="logo-lg pull-left" style="color:#000fff;"><img src="{{asset('new_logo.png')}}" width="24%" style="filter: grayscale(80%);">PAMINDO</span>
   </a>
