@@ -185,6 +185,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         Kamaln7\Toastr\ToastrServiceProvider::class,
+        Milon\Barcode\BarcodeServiceProvider::class,
     ],
 
     /*
@@ -239,6 +240,8 @@ return [
         'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Toastr' => Kamaln7\Toastr\Facades\Toastr::class,
+        'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
+        'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class,
     ],
 
 ];

@@ -12,8 +12,20 @@
     <li class="active">Master Machines</li>
   </ol>
 </section>
+
+
+
 <section class="content">
-  <div class="row">
+  <div class="row">>
+    
+    <div style="padding: 20px; background-color: #fff; margin: 0 auto;">
+      {{-- <img src="{{ $myBarcode }}" class="img-responsive" style="margin: 0 auto;">  --}}
+      <?php
+          // $myBarcode = DNS1D::getBarcodeHTML("MAULANAYUSUPPABDULLAH", "PHARMA2T",3,33);
+          echo DNS1D::getBarcodeHTML("4445645656", "C39");
+      ?>;
+    </div>
+
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header clearfix">
