@@ -2,7 +2,7 @@
 <header class="main-header">
   <a href="{{ config('app.url') }}" class="logo" >
     <span class="logo-mini"><b>ERP</b></span>
-    <span class="logo-lg"><b>PAMINDO</b></span>
+    <span class="logo-lg"><img src="{{asset('new_logo.png')}}" width="25%" style="filter: grayscale(80%);">PAMINDO</span>
   </a>
   <nav class="navbar navbar-static-top" >
       <!-- Sidebar toggle button-->

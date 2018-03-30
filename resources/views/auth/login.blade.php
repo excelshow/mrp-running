@@ -6,7 +6,7 @@
 
 <div class="login-box">
   <div class="login-logo">
-    <a href="/">ERP</a>
+    <a href="/"><img src="{{asset('new_logo.png')}}">PAMINDO TIGA T</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
