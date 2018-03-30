@@ -115,52 +115,49 @@
           <li class="{{ Request::is('sales/contracts') || Request::is('sales/contracts/*/*') || Request::is('sales/contracts/*/*/*') || Request::is('sales/contracts/*/*/*/*') ? 'menu-open active' : '' }}">
             <a href="{{ url('sales/contracts') }}"><i class="fa fa-circle-o"></i> Customer Contract</a>
           </li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
         </ul>
       </li>
 
-      <li class="treeview {{ Request::is('master/*') || Request::is('master/*/*') || Request::is('master/*/*/*') || Request::is('master/*/*/*/*') ? 'menu-open active' : '' }}">
+      <li class="treeview {{ Request::is('engineering/*') || Request::is('engineering/*/*') || Request::is('engineering/*/*/*') || Request::is('engineering/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
-          <i class="fa fa-share"></i> <span>Master Data</span>
+          <i class="fa fa-share"></i> <span>Production Engineering</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
 
-          <li class="treeview {{ Request::is('master/master-materials') || Request::is('master/master-materials/*') || Request::is('master/master-materials/*/*') || Request::is('master/master-materials/*/*/*') ? 'menu-open active' : '' }}">
+          <li class="treeview {{ Request::is('engineering/master-materials') || Request::is('engineering/master-materials/*') || Request::is('engineering/master-materials/*/*') || Request::is('engineering/master-materials/*/*/*') ? 'menu-open active' : '' }}">
             <a href="#"><i class="fa fa-circle-o"></i> Master Material
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="{{ Request::is('master/master-materials/maintenance-data') || Request::is('master/master-materials/maintenance-data/*') || Request::is('master/master-materials/maintenance-data/*/*') || Request::is('master/master-materials/maintenance-data/*/*/*') ? 'active' : '' }}">
-                <a href="{{ url('master/master-materials/maintenance-data') }}"><i class="fa fa-circle-o"></i> Maintenance Data</a>
+              <li class="{{ Request::is('engineering/master-materials/maintenance-data') || Request::is('engineering/master-materials/maintenance-data/*') || Request::is('engineering/master-materials/maintenance-data/*/*') || Request::is('engineering/master-materials/maintenance-data/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/master-materials/maintenance-data') }}"><i class="fa fa-circle-o"></i> Maintenance Data</a>
               </li>
-              <li class="{{ Request::is('master/master-materials/approval') || Request::is('master/master-materials/approval/*') || Request::is('master/master-materials/approval/*/*') || Request::is('master/master-materials/approval/*/*/*') ? 'active' : '' }}">
-                <a href="{{ url('master/master-materials/approval') }}"><i class="fa fa-circle-o"></i> Approval</a>
+              <li class="{{ Request::is('engineering/master-materials/approval') || Request::is('engineering/master-materials/approval/*') || Request::is('engineering/master-materials/approval/*/*') || Request::is('engineering/master-materials/approval/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/master-materials/approval') }}"><i class="fa fa-circle-o"></i> Approval</a>
               </li>
             </ul>
           </li>
 
-          <li class="treeview {{ Request::is('master/bill-of-materials') || Request::is('master/bill-of-materials/*') || Request::is('master/bill-of-materials/*/*') || Request::is('master/bill-of-materials/*/*/*') ? 'menu-open active' : '' }}">
+          <li class="treeview {{ Request::is('engineering/bill-of-materials') || Request::is('engineering/bill-of-materials/*') || Request::is('engineering/bill-of-materials/*/*') || Request::is('engineering/bill-of-materials/*/*/*') ? 'menu-open active' : '' }}">
             <a href="#"><i class="fa fa-circle-o"></i> Bill Of Material
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="{{ Request::is('master/bill-of-materials/maintenance-data') || Request::is('master/bill-of-materials/maintenance-data/*') || Request::is('master/bill-of-materials/maintenance-data/*/*') || Request::is('master/bill-of-materials/maintenance-data/*/*/*') ? 'active' : '' }}">
-                <a href="{{ url('master/bill-of-materials/maintenance-data') }}"><i class="fa fa-circle-o"></i> Maintenance Data</a>
+              <li class="{{ Request::is('engineering/bill-of-materials/maintenance-data') || Request::is('engineering/bill-of-materials/maintenance-data/*') || Request::is('engineering/bill-of-materials/maintenance-data/*/*') || Request::is('engineering/bill-of-materials/maintenance-data/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/bill-of-materials/maintenance-data') }}"><i class="fa fa-circle-o"></i> Maintenance Data</a>
               </li>
-              <li class="{{ Request::is('master/bill-of-materials/approval') || Request::is('master/bill-of-materials/approval/*') || Request::is('master/bill-of-materials/approval/*/*') || Request::is('master/bill-of-materials/approval/*/*/*') ? 'active' : '' }}">
-                <a href="{{ url('master/bill-of-materials/approval') }}"><i class="fa fa-circle-o"></i> Approval</a>
+              <li class="{{ Request::is('engineering/bill-of-materials/approval') || Request::is('engineering/bill-of-materials/approval/*') || Request::is('engineering/bill-of-materials/approval/*/*') || Request::is('engineering/bill-of-materials/approval/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/bill-of-materials/approval') }}"><i class="fa fa-circle-o"></i> Approval</a>
               </li>
             </ul>
           </li>
-
-          <li><a href="#"><i class="fa fa-circle-o"></i> Work Center</a></li>
 
           <li class="treeview">
             <a href="#"><i class="fa fa-circle-o"></i> Routing Master
@@ -173,7 +170,98 @@
               <li><a href="#"><i class="fa fa-circle-o"></i> Approval</a></li>
             </ul>
           </li>
+        </ul>
+      </li>
 
+      <li class="treeview {{ Request::is('planning/*') || Request::is('planning/*/*') || Request::is('planning/*/*/*') || Request::is('planning/*/*/*/*') ? 'menu-open active' : '' }}">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Production Planning</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li class="{{ Request::is('planning/labors') || Request::is('planning/labors/*') || Request::is('planning/labors/*/*') || Request::is('planning/labors/*/*/*') ? 'active' : '' }}">
+            <a href="{{ url('planning/labors') }}"><i class="fa fa-circle-o"></i> Labors Data</a>
+          </li>
+          <li class="{{ Request::is('planning/machines') || Request::is('planning/machines/*') || Request::is('planning/machines/*/*') || Request::is('planning/machines/*/*/*') ? 'active' : '' }}">
+            <a href="{{ url('planning/machines') }}"><i class="fa fa-circle-o"></i> Machines Data</a>
+          </li>
+
+          <li><a href="#"><i class="fa fa-circle-o"></i> Work Center</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> MRP Running</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Capacity Planning</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Production Control</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Create Order</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Release Order</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Print Order</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Scheduling</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Shop Floor Control</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Order Tracking</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Opr. and Order Confirmation</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Closed Order</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Inventory Control</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Goods Received</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Goods Issued</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>Purchasing</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> Purchase Requisition</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview {{ Request::is('master/*') || Request::is('master/*/*') || Request::is('master/*/*/*') || Request::is('master/*/*/*/*') ? 'menu-open active' : '' }}">
+        <a href="#">
+          <i class="fa fa-share"></i> <span>Master Data</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
           <li class="treeview {{ Request::is('master/reference') || Request::is('master/reference/*') || Request::is('master/reference/*/*') || Request::is('master/reference/*/*/*') ? 'menu-open active' : '' }}">
             <a href="#"><i class="fa fa-circle-o"></i> Data Reference
               <span class="pull-right-container">
@@ -191,12 +279,7 @@
               <li class="{{ Request::is('master/reference/koding') || Request::is('master/reference/koding/*') || Request::is('master/reference/koding/*/*') || Request::is('master/reference/koding/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/koding') }}"><i class="fa fa-circle-o"></i> Koding Code</a>
               </li>
-              <li class="{{ Request::is('master/reference/labors') || Request::is('master/reference/labors/*') || Request::is('master/reference/labors/*/*') || Request::is('master/reference/labors/*/*/*') ? 'active' : '' }}">
-                <a href="{{ url('master/reference/labors') }}"><i class="fa fa-circle-o"></i> Labors Data</a>
-              </li>
-              <li class="{{ Request::is('master/reference/machines') || Request::is('master/reference/machines/*') || Request::is('master/reference/machines/*/*') || Request::is('master/reference/machines/*/*/*') ? 'active' : '' }}">
-                <a href="{{ url('master/reference/machines') }}"><i class="fa fa-circle-o"></i> Machines Data</a>
-              </li>
+              
               <li><a href="#"><i class="fa fa-circle-o"></i> Operation Status Code </a></li>
               <li class="{{ Request::is('master/reference/part-class') || Request::is('master/reference/part-class/*') || Request::is('master/reference/part-class/*/*') || Request::is('master/reference/part-class/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/part-class') }}"><i class="fa fa-circle-o"></i> Part Class</a>
@@ -206,85 +289,6 @@
             </ul>
           </li>
 
-        </ul>
-      </li>
-
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-laptop"></i>
-          <span>Work Order</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Work Order Create</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Work Create Release</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Work Order Print</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Work Order Confirmation</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Work Order Close</a></li>
-        </ul>
-      </li>
-
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-laptop"></i>
-          <span>Scheduling</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Run MRP</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Order Scheduling</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Operation Scheduling</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Capacity Planning</a></li>
-        </ul>
-      </li>
-
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-laptop"></i>
-          <span>Shop Floor Control</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Order Tracking</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Operation Tracking</a></li>
-        </ul>
-      </li>
-
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-laptop"></i>
-          <span>Inventory</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Incoming</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Out Going</a></li>
-        </ul>
-      </li>
-
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-laptop"></i>
-          <span>Reporting</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Work Center Performance</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Labor Performance</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Order Tracking</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Tracking Part</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Contract Delivery</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Monitoring Stock</a></li>
         </ul>
       </li>
 
