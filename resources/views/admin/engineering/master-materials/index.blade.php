@@ -35,9 +35,13 @@
             <tbody>
               @foreach ($materials as $item)
                 <tr>
-                  <td>
+                  <td height="500">
                     @php
-                      echo DNS1D::getBarcodeHTML($item->id, "C39");
+                      // echo DNS1D::getBarcodeHTML($item->id, "C39");
+                      echo '<img src="data:image/png;base64,' . DNS1D::getBarcodePNG("4", "C39+",3,33,array(1,1,1), true) . '"    />';
+                      // echo '<img src="' . DNS1D::getBarcodePNG("4", "C39+",3,33,array(1,1,1), true) . '" alt="barcode"   />';
+                      // echo DNS1D::getBarcodeSVG("4445645656", "PHARMA2T",3,33,"green", true);
+                      // echo DNS1D::getBarcodeHTML("4445645656", "PHARMA2T",3,33,"green", true);
                     @endphp
                   </td>
                   <td>{{ $item->material_number }}</td>
@@ -77,11 +81,61 @@
 
 @endsection
 
+@push('styles')
+  
+@endpush
+
 @push('scripts')
   <script type="text/javascript">
     jQuery( document ).ready(function() {
-      var data = $( '#datatable-general' ).DataTable({
+      function getBase64Image(img) {
+        var canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+        return canvas.toDataURL("image/png");
+      }
+
+      var table = $( '#datatable-general' ).DataTable({
+        responsive: true,
+        bPaginate: true,
+        lengthMenu: [25, 50, 100, 500, 1000],
+        dom: 'Bfrtip',
+            buttons: [
+                // 'copy', 'csv', 'excel', 'pdf', 'print', 
+                // 'pdf'
+                {
+                  extend : 'pdfHtml5',
+                  customize: function(doc) {
+                    
+                    var image = '';
+                    for (var i=1;i<doc.content[1].table.body.length;i++) {
+
+                      var str = doc.content[1].table.body[i][0].text;
+                      var regex = /src="(data:image\/[^;]+;base64[^"]+)"/;
+                      var src = regex.exec(str)[1];
+                      image = src;
+
+                      delete doc.content[1].table.body[i][0].text;
+                      doc.content[1].table.body[i][0].image = doc.content[1].table.body[i][0].text;
+                      doc.content[1].table.body[i][0].image = src;
+                      doc.content[1].table.body[i][0].width = 100;
+                      doc.content[1].table.body[i][0].height = 150;
+                    }
+
+                  },
+                  text : '<i class="fa fa-file-pdf-o"> PDF</i>',
+                  titleAttr : 'PDF', 
+                  exportOptions : {
+                    stripHtml: false,
+                    columns: [ 0, 1, 2, 3, 4, 5 ]
+                  }
+                }
+
+            ]
       });
+      
 
       $(document).on('click', '.remove-item', function(e){
         e.preventDefault();
