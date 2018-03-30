@@ -102,7 +102,7 @@
 
       <li class="treeview {{ Request::is('sales/*') || Request::is('sales/*/*') || Request::is('sales/*/*/*') || Request::is('sales/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
-          <i class="fa fa-laptop"></i>
+          <i class="fa fa-certificate"></i>
           <span>Sales</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -120,7 +120,7 @@
 
       <li class="treeview {{ Request::is('engineering/*') || Request::is('engineering/*/*') || Request::is('engineering/*/*/*') || Request::is('engineering/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
-          <i class="fa fa-share"></i> <span>Production Engineering</span>
+          <i class="fa fa-cogs"></i> <span>Production Engineering</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -175,7 +175,7 @@
 
       <li class="treeview {{ Request::is('planning/*') || Request::is('planning/*/*') || Request::is('planning/*/*/*') || Request::is('planning/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
-          <i class="fa fa-laptop"></i>
+          <i class="fa fa-cog"></i>
           <span>Production Planning</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -197,7 +197,7 @@
 
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-laptop"></i>
+          <i class="fa fa-tasks"></i>
           <span>Production Control</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -213,7 +213,7 @@
 
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-laptop"></i>
+          <i class="fa fa-bars"></i>
           <span>Shop Floor Control</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -228,7 +228,7 @@
 
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-laptop"></i>
+          <i class="fa fa-indent"></i>
           <span>Inventory Control</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -242,7 +242,7 @@
 
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-laptop"></i>
+          <i class="fa fa-asterisk"></i>
           <span>Purchasing</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -256,7 +256,7 @@
 
       <li class="treeview {{ Request::is('master/*') || Request::is('master/*/*') || Request::is('master/*/*/*') || Request::is('master/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
-          <i class="fa fa-share"></i> <span>Master Data</span>
+          <i class="fa fa-archive"></i> <span>Master Data</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
