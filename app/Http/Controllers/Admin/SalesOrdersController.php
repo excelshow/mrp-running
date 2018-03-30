@@ -170,7 +170,7 @@ class SalesOrdersController extends Controller
     public function destroy($id)
     {
         SalesOrder::find(decrypt($id))->delete();
-        flash('Order Deleted.')->success();
+        Toastr::success('Order deleted.', 'Success');
 
         $orders = SalesOrder::all();
         $data['orders'] = $orders;

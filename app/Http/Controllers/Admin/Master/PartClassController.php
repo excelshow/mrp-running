@@ -118,7 +118,7 @@ class PartClassController extends Controller
     public function destroy($id)
     {
         MasterPartClass::find(decrypt($id))->delete();
-        flash('Part class Deleted.')->success();
+        Toastr::success('Part class deleted.', 'Success');
 
         $parts = MasterPartClass::all();
         $data['parts'] = $parts;

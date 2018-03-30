@@ -122,7 +122,7 @@ class MachinesController extends Controller
     public function destroy($id)
     {
         MasterMachine::find(decrypt($id))->delete();
-        flash('Machine Deleted.')->success();
+        Toastr::success('Machine deleted.', 'Success');
 
         $machines = MasterMachine::orderBy('created_at', 'desc')->get();
         $data['machines'] = $machines;

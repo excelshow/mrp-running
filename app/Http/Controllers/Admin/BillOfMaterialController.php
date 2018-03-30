@@ -157,7 +157,7 @@ class BillOfMaterialController extends Controller
     public function destroy($id)
     {
         BOM::find(decrypt($id))->delete();
-        flash('Material Deleted.')->success();
+        Toastr::success('Material Deleted.', 'Success');
 
         $materials = BOM::orderBy('created_at','desc')->get();
         $data['materials'] = $materials;

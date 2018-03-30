@@ -114,7 +114,7 @@ class LaborsController extends Controller
     public function destroy($id)
     {
         MasterLabor::find(decrypt($id))->delete();
-        flash('Labor Deleted.')->success();
+        Toastr::success('Labor deleted.', 'Success');
 
         $labors = MasterLabor::orderBy('created_at', 'desc')->get();
         $data['labors'] = $labors;

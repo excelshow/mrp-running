@@ -156,7 +156,7 @@ class MasterMaterialController extends Controller
     public function destroy($id)
     {
         MasterMaterial::find(decrypt($id))->delete();
-        flash('Material Deleted.')->success();
+        Toastr::success('Material deleted.', 'Success');
 
         $materials = MasterMaterial::orderBy('created_at','desc')->get();
         $data['materials'] = $materials;

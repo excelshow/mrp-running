@@ -139,7 +139,7 @@ class SalesContractsController extends Controller
     public function destroy($id)
     {
         SalesContract::find(decrypt($id))->delete();
-        flash('Contract Deleted.')->success();
+        Toastr::success('Contract deleted.', 'Success');
 
         $contracts = SalesContract::all();
         $data['contracts'] = $contracts;

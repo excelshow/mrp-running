@@ -1,24 +1,24 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Machines | ')
+@section('title', 'Work Center | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Machines
+    Work Center
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Machines</li>
+    <li class="active">Work Center</li>
   </ol>
 </section>
 
 <section class="content">
-  <div class="row">>
+  <div class="row">
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header clearfix">
-          <a href="{{ url('planning/machines/create') }}" class="btn btn-primary pull-right">Create</a>
+          <a href="{{ url('planning/work-center/create') }}" class="btn btn-primary pull-right">Create</a>
         </div>
         <div class="box-body">
           <table id="datatable-general" class="table table-bordered table-striped">
@@ -34,7 +34,7 @@
             </tr>
             </thead>
             <tbody>
-              @foreach ($machines as $item)
+              @foreach ($works as $item)
                 <tr>
                   <td>{{ $item->number }}</td>
                   <td>{{ $item->name }}</td>
@@ -43,7 +43,7 @@
                   <td>{{ $item->labor->name }}</td>
                   <td>{{ $item->created_at }}</td>
                   <td>
-                    <a href="{{ route('planning.machines.edit', $item->id) }}" class="btn btn-info"">
+                    <a href="{{ route('planning.work-center.edit', $item->id) }}" class="btn btn-info"">
                       <span class="glyphicon glyphicon-edit"></span> Edit
                     </a>
                     <button class="btn btn-danger remove-item" data-id="{{ encrypt($item->id) }}">
@@ -96,7 +96,7 @@
           if (isConfirm) {
             $.ajax({
               type: "DELETE",
-              url: "{{ url('planning/machines') }}"+"/"+id,
+              url: "{{ url('planning/work-center') }}"+"/"+id,
               data: {_token: "{{ csrf_token() }}"},
               cache: false,
               success: function(data){

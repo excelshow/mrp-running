@@ -114,7 +114,7 @@ class StoresController extends Controller
     public function destroy($id)
     {
         MasterStore::find(decrypt($id))->delete();
-        flash('Store Deleted.')->success();
+        Toastr::success('Store deleted.', 'Success');
 
         $stores = MasterStore::all();
         $data['stores'] = $stores;

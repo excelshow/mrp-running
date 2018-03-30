@@ -113,7 +113,7 @@ class KodingController extends Controller
     public function destroy($id)
     {
         MasterKoding::find(decrypt($id))->delete();
-        flash('Koding Deleted.')->success();
+        Toastr::success('Kurs deleted.', 'Success');
 
         $kodings = MasterKoding::all();
         $data['kodings'] = $kodings;

@@ -14,7 +14,7 @@
 </section>
 
 <section class="content">
-  <div class="row">>
+  <div class="row">
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header clearfix">
@@ -40,7 +40,7 @@
                   <td>{{ $item->name }}</td>
                   <td>{{ $item->total_machine }}</td>
                   <td>{{ $item->total_shift }}</td>
-                  <td>{{ $item->labor->name }}</td>
+                  <td>{{ isset($item->labor->name) ? $item->labor->name : '-'}}</td>
                   <td>{{ $item->created_at }}</td>
                   <td>
                     <a href="{{ route('planning.machines.edit', $item->id) }}" class="btn btn-info"">

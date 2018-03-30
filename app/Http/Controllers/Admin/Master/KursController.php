@@ -125,7 +125,7 @@ class KursController extends Controller
     public function destroy($id)
     {
         MasterKurs::find(decrypt($id))->delete();
-        flash('Kurs Deleted.')->success();
+        Toastr::success('Kurs deleted.', 'Success');
 
         $kurs = MasterKurs::all();
         $data['kurs'] = $kurs;
