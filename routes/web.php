@@ -24,6 +24,8 @@ Route::post('/send','MailController@send');
 Auth::routes();
 
 include('web_manufacturing.php');
+include('web_engineering.php');
+include('web_planning.php');
 include('web_sales.php');
 include('web_master.php');
 
