@@ -1,10 +1,10 @@
 <div class="wrapper">
 <header class="main-header">
-  <a href="{{ config('app.url') }}" class="logo" >
+  <a href="{{ config('app.url') }}" class="logo" style="background-color:#dedfe0" >
     <span class="logo-mini"><b>ERP</b></span>
-    <span class="logo-lg"><img src="{{asset('new_logo.png')}}" width="25%" style="filter: grayscale(80%);">PAMINDO</span>
+    <span class="logo-lg pull-left" style="color:#000fff;"><img src="{{asset('new_logo.png')}}" width="24%" style="filter: grayscale(80%);">PAMINDO</span>
   </a>
-  <nav class="navbar navbar-static-top" >
+  <nav class="navbar navbar-static-top" style="background-color:#c6cfd4" >
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
