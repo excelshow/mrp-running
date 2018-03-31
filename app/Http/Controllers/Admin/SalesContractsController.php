@@ -49,6 +49,7 @@ class SalesContractsController extends Controller
             'sales_order_id' => 'required',
             'customer_id' => 'required',
             'contract_number' => 'required',
+            'currency_id' => 'required',
         ]);
 
         $contract = new SalesContract();
@@ -110,6 +111,7 @@ class SalesContractsController extends Controller
             'sales_order_id' => 'required',
             'customer_id' => 'required',
             'contract_number' => 'required',
+            'currency_id' => 'required',
         ]);
 
         $contract = SalesContract::find(decrypt($id));

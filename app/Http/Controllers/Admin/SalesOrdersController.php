@@ -50,6 +50,7 @@ class SalesOrdersController extends Controller
             'inquiry_type' => 'required',
             'customer_code' => 'required',
             'customer_name' => 'required',
+            'currency_id' => 'required',
         ]);
 
         $order = new SalesOrder();
@@ -125,6 +126,7 @@ class SalesOrdersController extends Controller
             'inquiry_type' => 'required',
             'customer_code' => 'required',
             'customer_name' => 'required',
+            'currency_id' => 'required',
         ]);
 
         $order = SalesOrder::find(decrypt($id));
