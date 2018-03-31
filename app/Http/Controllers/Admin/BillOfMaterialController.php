@@ -46,6 +46,7 @@ class BillOfMaterialController extends Controller
             'part_level' => 'required',
             'part_number' => 'required',
             'part_name' => 'required',
+            'koding_id' => 'required',
         ]);
 
         $material = new BOM();
@@ -117,6 +118,7 @@ class BillOfMaterialController extends Controller
             'part_level' => 'required',
             'part_number' => 'required',
             'part_name' => 'required',
+            'koding_id' => 'required',
         ]);
 
         $material = BOM::find(decrypt($id));

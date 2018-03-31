@@ -44,6 +44,8 @@ class MasterMaterialController extends Controller
         $this->validate($request, [
             'material_number' => 'required',
             'material_name' => 'required',
+            'koding_id' => 'required',
+            'store_id' => 'required',
         ]);
 
         $material = new MasterMaterial();
@@ -114,6 +116,8 @@ class MasterMaterialController extends Controller
         $this->validate($request, [
             'material_number' => 'required',
             'material_name' => 'required',
+            'koding_id' => 'required',
+            'store_id' => 'required',
         ]);
 
         $material = MasterMaterial::find(decrypt($id));
