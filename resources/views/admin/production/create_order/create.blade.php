@@ -160,7 +160,7 @@
             </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="{{url('/user')}}" class="btn btn-danger">Back</a>
+                <a href="{{url('/work-order')}}" class="btn btn-danger">Back</a>
               </div>
            </div>
         </form>
