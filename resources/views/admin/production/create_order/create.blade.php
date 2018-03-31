@@ -1,16 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Dashboard | ')
+@section('title', 'Work Order| ')
 
 @section('content')
 <section class="content-header">
   <h1>
     Work Order
-    <small></small>
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Users</li>
+    <li class="active">Work Order</li>
   </ol>
 </section>
 <section class="content">
