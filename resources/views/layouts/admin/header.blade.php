@@ -1,7 +1,7 @@
 <div class="wrapper">
 <header class="main-header">
   <a href="{{ url('home') }}" class="logo" style="background-color: #ffffff" >
-    <span class="logo-mini"><b>ERP</b></span>
+    <span class="logo-mini" style="color: #0001fe;font-weight: bold;"><b>ERP</b></span>
     <span class="logo-lg pull-left" style="color: #0001fe;font-weight: bold;"><img src="{{asset('new_logo.png')}}" width="24%" style="">
       <span>PAMINDO</span>
     </span>
