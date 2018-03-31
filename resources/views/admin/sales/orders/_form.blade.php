@@ -148,13 +148,13 @@
             @endif
         </div>
 
-        <div class="form-group {{ $errors->has('delivery_volumen') ? ' has-error' : '' }}">
+        <div class="form-group {{ $errors->has('delivery_volume') ? ' has-error' : '' }}">
             <label>Delivery Volume</label>
-            {!! Form::text('delivery_volumen', null, [
+            {!! Form::text('delivery_volume', null, [
                 'class'=>'form-control',
             ]) !!}
-            @if($errors->has('delivery_volumen'))
-                <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('delivery_volumen') }}</span>            
+            @if($errors->has('delivery_volume'))
+                <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('delivery_volume') }}</span>            
             @endif
         </div>
             
