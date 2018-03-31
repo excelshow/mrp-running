@@ -1,16 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Dashboard | ')
+@section('title', 'Work Order | ')
 
 @section('content')
 <section class="content-header">
       <h1>
-        Admin List 
-        <small>All User</small>
+        Work Order
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Users</li>
+        <li class="active">Work Order</li>
       </ol>
     </section>
 <section class="content">
@@ -23,7 +22,7 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Data Users</h3>
+          <h3 class="box-title">Data Work Order</h3>
           <ul class="nav navbar-right panel_toolbox">
 
              <li><a class='create-modal' href="{{route('work-order.create')}}"><div class='pull-right'><button type='button' class='btn btn-primary btn-md'>Create New Work Order</button></div></a></li>
