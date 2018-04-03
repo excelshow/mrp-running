@@ -39,7 +39,7 @@
                   <td>{{ $item->master_material_id }}</td>
                   <td>
                     @php
-                      echo DNS1D::getBarcodeHTML($item->id, "C39");
+                      echo DNS1D::getBarcodeHTML($item->part_number, "C39");
                     @endphp
                   </td>
                   <td>{{ $item->part_level }}</td>
