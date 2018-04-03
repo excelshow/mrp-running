@@ -25,11 +25,11 @@ class CreateMasterMaterialsTable extends Migration
             $table->integer('koding_id')->nullable();
             $table->string('make')->nullable();
             $table->string('part_serial_number')->nullable();
-            $table->integer('quantity_part_thickness')->nullable();
-            $table->integer('quantity_part_width')->nullable();
-            $table->integer('quantity_part_length')->nullable();
-            $table->integer('quantity_part_diameter')->nullable();
-            $table->integer('quantity_part_weight')->nullable();
+            $table->decimal('quantity_part_thickness')->nullable();
+            $table->decimal('quantity_part_width')->nullable();
+            $table->decimal('quantity_part_length')->nullable();
+            $table->decimal('quantity_part_diameter')->nullable();
+            $table->decimal('quantity_part_weight')->nullable();
             $table->string('dimension_uom')->nullable();
             $table->string('weight_uom')->nullable();
             $table->string('material_specification')->nullable();
