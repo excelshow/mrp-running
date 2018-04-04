@@ -101,6 +101,10 @@
         bPaginate: true,
         lengthMenu: [25, 50, 100, 500, 1000],
         dom: 'Bfrtip',
+          buttons: [
+              'copy', 'csv', 'excel', 'pdf', 'print'
+          ]
+        /*dom: 'Bfrtip',
             buttons: [
                 // 'copy', 'csv', 'excel', 'pdf', 'print', 
                 // 'pdf'
@@ -132,7 +136,7 @@
                   }
                 }
 
-            ]
+            ]*/
       });
       
 
