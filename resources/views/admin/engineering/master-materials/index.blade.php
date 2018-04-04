@@ -23,10 +23,11 @@
           <table id="datatable-general" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>Barcode</th>
               <th>Number</th>
               <th>Name</th>
               <th>Material Code ID</th>
+              <th>Thickness</th>
+              <th>Width</th>
               <th>Created At</th>
               <th>Updated At</th>
               <th>Action</th>
@@ -35,18 +36,16 @@
             <tbody>
               @foreach ($materials as $item)
                 <tr>
-                  <td>
+                  {{-- <td>
                     @php
-                      // echo DNS1D::getBarcodeHTML($item->id, "C39");
                       echo '<img src="data:image/png;base64,' . DNS1D::getBarcodePNG($item->material_number, "C39+", 3, 50, array(15,16,18), true) . '"    />';
-                      // echo '<img src="' . DNS1D::getBarcodePNG("4", "C39+",3,33,array(1,1,1), true) . '" alt="barcode"   />';
-                      // echo DNS1D::getBarcodeSVG("4445645656", "PHARMA2T",3,33,"green", true);
-                      // echo DNS1D::getBarcodeHTML("4445645656", "PHARMA2T",3,33,"green", true);
                     @endphp
-                  </td>
+                  </td> --}}
                   <td>{{ $item->material_number }}</td>
                   <td>{{ $item->material_name }}</td>
                   <td>{{ $item->material_id }}</td>
+                  <td>{{ $item->quantity_part_thickness }}</td>
+                  <td>{{ $item->quantity_part_width }}</td>
                   <td>{{ $item->created_at }}</td>
                   <td>{{ $item->updated_at }}</td>
                   <td>

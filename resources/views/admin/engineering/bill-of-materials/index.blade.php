@@ -24,7 +24,7 @@
             <thead>
             <tr>
               <th>Master Material ID</th>
-              <th>Barcode</th>
+              {{-- <th>Barcode</th> --}}
               <th>Part Level</th>
               <th>Part Number</th>
               <th>Part Name</th>
@@ -37,11 +37,11 @@
               @foreach ($materials as $item)
                 <tr>
                   <td>{{ $item->master_material_id }}</td>
-                  <td>
+                  {{-- <td>
                     @php
                       echo DNS1D::getBarcodeHTML($item->part_number, "C39");
                     @endphp
-                  </td>
+                  </td> --}}
                   <td>{{ $item->part_level }}</td>
                   <td>{{ $item->part_number }}</td>
                   <td>{{ $item->part_name }}</td>
