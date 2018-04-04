@@ -112,14 +112,8 @@
 
         <div class="form-group {{ $errors->has('quantity_part_thickness') ? ' has-error' : '' }}">
             <label>Quantity Part Thickness</label>
-<<<<<<< HEAD
             {!! Form::text('quantity_part_thickness', null, [
                 'class'=>'form-control decimal-input',
-=======
-            {!! Form::number('quantity_part_thickness', null, [
-                'class'=>'form-control',
-                'step'=>'any',
->>>>>>> 34f55ff5d50c33bf172e42f4d15ffadca308a454
             ]) !!}
             @if($errors->has('quantity_part_thickness'))
                 <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('quantity_part_thickness') }}</span>            
@@ -128,14 +122,8 @@
 
         <div class="form-group {{ $errors->has('quantity_part_width') ? ' has-error' : '' }}">
             <label>Quantity Part Width</label>
-<<<<<<< HEAD
             {!! Form::text('quantity_part_width', null, [
                 'class'=>'form-control decimal-input',
-=======
-            {!! Form::number('quantity_part_width', null, [
-                'class'=>'form-control',
-                'step'=>'any',
->>>>>>> 34f55ff5d50c33bf172e42f4d15ffadca308a454
             ]) !!}
             @if($errors->has('quantity_part_width'))
                 <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('quantity_part_width') }}</span>            
@@ -144,14 +132,8 @@
 
         <div class="form-group {{ $errors->has('quantity_part_length') ? ' has-error' : '' }}">
             <label>Quantity Part Length</label>
-<<<<<<< HEAD
             {!! Form::text('quantity_part_length', null, [
                 'class'=>'form-control decimal-input',
-=======
-            {!! Form::number('quantity_part_length', null, [
-                'class'=>'form-control',
-                'step'=>'any',
->>>>>>> 34f55ff5d50c33bf172e42f4d15ffadca308a454
             ]) !!}
             @if($errors->has('quantity_part_length'))
                 <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('quantity_part_length') }}</span>            
@@ -160,14 +142,8 @@
 
         <div class="form-group {{ $errors->has('quantity_part_diameter') ? ' has-error' : '' }}">
             <label>Quantity Part Diameter</label>
-<<<<<<< HEAD
             {!! Form::text('quantity_part_diameter', null, [
                 'class'=>'form-control decimal-input',
-=======
-            {!! Form::number('quantity_part_diameter', null, [
-                'class'=>'form-control',
-                'step'=>'any',
->>>>>>> 34f55ff5d50c33bf172e42f4d15ffadca308a454
             ]) !!}
             @if($errors->has('quantity_part_diameter'))
                 <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('quantity_part_diameter') }}</span>            
@@ -176,14 +152,8 @@
 
         <div class="form-group {{ $errors->has('quantity_part_weight') ? ' has-error' : '' }}">
             <label>Quantity Part Weight</label>
-<<<<<<< HEAD
             {!! Form::text('quantity_part_weight', null, [
                 'class'=>'form-control decimal-input',
-=======
-            {!! Form::number('quantity_part_weight', null, [
-                'class'=>'form-control',
-                'step'=>'any',
->>>>>>> 34f55ff5d50c33bf172e42f4d15ffadca308a454
             ]) !!}
             @if($errors->has('quantity_part_weight'))
                 <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('quantity_part_weight') }}</span>            
