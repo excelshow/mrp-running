@@ -38,6 +38,7 @@ class CreateMasterMaterialsTable extends Migration
             $table->string('bin_location')->nullable();
             $table->string('remark')->nullable();
             $table->string('status')->nullable();
+            $table->string('type')->nullable();
             $table->boolean('is_approved')->nullable()->default(false);
             $table->integer('user_id_created')->nullable();
             $table->integer('user_id_updated')->nullable();
