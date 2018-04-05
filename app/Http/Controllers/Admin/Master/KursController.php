@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\MasterKurs;
 use Kamaln7\Toastr\Facades\Toastr;
 use Auth;
+
 class KursController extends Controller
 {
     /**
