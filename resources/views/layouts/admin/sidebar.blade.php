@@ -210,12 +210,18 @@
                 <a href="{{ url('master/reference/koding') }}"><i class="fa fa-circle-o"></i> Koding Code</a>
               </li>
               
-              <li><a href="#"><i class="fa fa-circle-o"></i> Operation Status Code </a></li>
+              <li class="{{ Request::is('master/reference/operation-status') || Request::is('master/reference/operation-status/*') || Request::is('master/reference/operation-status/*/*') || Request::is('master/reference/operation-status/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/operation-status') }}"><i class="fa fa-circle-o"></i> Operation Status Code </a>
+              </li>
               <li class="{{ Request::is('master/reference/part-class') || Request::is('master/reference/part-class/*') || Request::is('master/reference/part-class/*/*') || Request::is('master/reference/part-class/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/part-class') }}"><i class="fa fa-circle-o"></i> Part Class</a>
               </li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Sales Document Type</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Shop Code</a></li>
+              <li class="{{ Request::is('master/reference/sales-document-type') || Request::is('master/reference/sales-document-type/*') || Request::is('master/reference/sales-document-type/*/*') || Request::is('master/reference/sales-document-type/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/sales-document-type') }}"><i class="fa fa-circle-o"></i> Sales Document Type</a>
+              </li>
+              <li class="{{ Request::is('master/reference/shop-code') || Request::is('master/reference/shop-code/*') || Request::is('master/reference/shop-code/*/*') || Request::is('master/reference/shop-code/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/shop-code') }}"><i class="fa fa-circle-o"></i> Shop Code</a>
+              </li>
             </ul>
           </li>
 

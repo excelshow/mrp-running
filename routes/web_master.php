@@ -27,6 +27,9 @@ Route::group(['middleware' => 'auth', 'namespace'=>'Admin\Master', 'prefix' => '
 		Route::resource('labors', 'LaborsController');
 		Route::resource('machines', 'MachinesController');
 		Route::resource('part-class', 'PartClassController');
+		Route::resource('shop-code', 'ShopCodeController');
+		Route::resource('sales-document-type', 'SalesDocumentTypeController');
+		Route::resource('operation-status', 'OperationStatusController');
 	});
 
 });
