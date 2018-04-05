@@ -197,6 +197,9 @@
               </span>
             </a>
             <ul class="treeview-menu">
+              <li class="{{ Request::is('master/reference/customers') || Request::is('master/reference/customers/*') || Request::is('master/reference/customers/*/*') || Request::is('master/reference/customers/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/customers') }}"><i class="fa fa-circle-o"></i> Customers</a>
+              </li>
               <li class="{{ Request::is('master/reference/units') || Request::is('master/reference/units/*') || Request::is('master/reference/units/*/*') || Request::is('master/reference/units/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/units') }}"><i class="fa fa-circle-o"></i> Unit Of Measure</a>
               </li>
@@ -222,9 +225,7 @@
               <li class="{{ Request::is('master/reference/shop-code') || Request::is('master/reference/shop-code/*') || Request::is('master/reference/shop-code/*/*') || Request::is('master/reference/shop-code/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/shop-code') }}"><i class="fa fa-circle-o"></i> Shop Code</a>
               </li>
-              <li class="{{ Request::is('master/reference/customers') || Request::is('master/reference/customers/*') || Request::is('master/reference/customers/*/*') || Request::is('master/reference/customers/*/*/*') ? 'active' : '' }}">
-                <a href="{{ url('master/reference/customers') }}"><i class="fa fa-circle-o"></i> Customers</a>
-              </li>
+              
             </ul>
           </li>
 
