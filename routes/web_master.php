@@ -20,6 +20,7 @@ Route::group(['middleware' => 'auth', 'namespace'=>'Admin\Master', 'prefix' => '
 
 	/* data reference */
 	Route::group(['prefix' => 'reference', 'as' => 'reference.'], function(){
+		Route::resource('units', 'UnitController');
 		Route::resource('kurs', 'KursController');
 		Route::resource('koding', 'KodingController');
 		Route::resource('stores', 'StoresController');
