@@ -25,7 +25,7 @@
             <tr>
               <th>Name</th>
               <th>Description</th>
-              <th>Date</th>
+              <th>Created At</th>
               <th>Action</th>
             </tr>
             </thead>
@@ -34,7 +34,7 @@
                 <tr>
                   <td>{{ $item->name }}</td>
                   <td>{{ $item->description }}</td>
-                  <td>{{ $item->date }}</td>
+                  <td>{{ $item->created_at }}</td>
                   <td>
                     <a href="{{ route('master.reference.units.edit', $item->id) }}" class="btn btn-info"">
                       <span class="glyphicon glyphicon-edit"></span> Edit
@@ -50,7 +50,7 @@
             <tr>
               <th>Name</th>
               <th>Description</th>
-              <th>Date</th>
+              <th>Created At</th>
               <th>Action</th>
             </tr>
             </tfoot>
