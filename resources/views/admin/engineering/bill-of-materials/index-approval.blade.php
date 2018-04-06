@@ -53,7 +53,7 @@
                   </td>
                   <td>{{ $item->updated_at }}</td>
                   <td>
-                    <a href="{{ route('engineering.bill-of-materials.approval.edit', $item->id) }}" class="btn btn-info"">
+                    <a href="{{ route('engineering.bill-of-materials.approval.edit', $item->id) }}" class="btn btn-xs btn-info"">
                       <span class="glyphicon glyphicon-edit"></span> Approval
                     </a>
                   </td>

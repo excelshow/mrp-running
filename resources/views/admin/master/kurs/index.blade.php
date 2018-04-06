@@ -40,10 +40,10 @@
                   <td>{{ $item->buy }}</td>
                   <td>{{ $item->date }}</td>
                   <td>
-                    <a href="{{ route('master.reference.kurs.edit', $item->id) }}" class="btn btn-info"">
+                    <a href="{{ route('master.reference.kurs.edit', $item->id) }}" class="btn btn-xs btn-info"">
                       <span class="glyphicon glyphicon-edit"></span> Edit
                     </a>
-                    <button class="btn btn-danger remove-item" data-id="{{ encrypt($item->id) }}">
+                    <button class="btn btn-xs btn-danger remove-item" data-id="{{ encrypt($item->id) }}">
                       <span class="glyphicon glyphicon-trash"></span> Delete
                     </button>
                   </td>
