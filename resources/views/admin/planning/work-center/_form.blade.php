@@ -54,13 +54,14 @@
             @endif
         </div>
 
-        <div class="form-group {{ $errors->has('location') ? ' has-error' : '' }}">
+
+        <div class="form-group {{ $errors->has('location_id') ? ' has-error' : '' }}">
             <label>Location</label>
-            {!! Form::text('location', null, [
-                'class'=>'form-control',
-            ]) !!}
-            @if($errors->has('location'))
-                <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('location') }}</span>            
+            {!! Form::select('location_id', [
+                '' => ''
+                ] + App\Location::pluck('name','id')->all(), null, ['class'=>'form-control']); !!}
+            @if($errors->has('location_id'))
+                <span id="form_control_1-error" class="help-block help-block-error">{{ $errors->first('location_id') }}</span>            
             @endif
         </div>
 

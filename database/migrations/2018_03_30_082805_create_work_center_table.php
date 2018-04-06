@@ -20,7 +20,7 @@ class CreateWorkCenterTable extends Migration
             $table->integer('asset_number')->nullable();
             $table->longText('description')->nullable();
             $table->string('category')->nullable();
-            $table->string('location')->nullable();
+            $table->integer('location_id')->nullable();
             $table->string('utilization')->nullable();
             $table->integer('total_shift')->nullable();
             $table->string('queue_time')->nullable();

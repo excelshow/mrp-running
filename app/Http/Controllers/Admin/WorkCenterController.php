@@ -44,6 +44,7 @@ class WorkCenterController extends Controller
         $this->validate($request, [
             'number' => 'required',
             'machine_id' => 'required',
+            'location_id' => 'required',
             'asset_number' => 'required',
         ]);
 
@@ -53,7 +54,7 @@ class WorkCenterController extends Controller
         $work->asset_number = $request->asset_number;
         $work->description = $request->description;
         $work->category = $request->category;
-        $work->location = $request->location;
+        $work->location_id = $request->location_id;
         $work->utilization = $request->utilization;
         $work->total_shift = $request->total_shift;
         $work->queue_time = $request->queue_time;
@@ -116,6 +117,7 @@ class WorkCenterController extends Controller
         $this->validate($request, [
             'number' => 'required',
             'machine_id' => 'required',
+            'location_id' => 'required',
             'asset_number' => 'required',
         ]);
 
@@ -125,7 +127,7 @@ class WorkCenterController extends Controller
         $work->asset_number = $request->asset_number;
         $work->description = $request->description;
         $work->category = $request->category;
-        $work->location = $request->location;
+        $work->location_id = $request->location_id;
         $work->utilization = $request->utilization;
         $work->total_shift = $request->total_shift;
         $work->queue_time = $request->queue_time;

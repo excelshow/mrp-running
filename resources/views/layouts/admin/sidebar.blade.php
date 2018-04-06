@@ -152,7 +152,9 @@
           <li class="{{ Request::is('planning/machines') || Request::is('planning/machines/*') || Request::is('planning/machines/*/*') || Request::is('planning/machines/*/*/*') ? 'active' : '' }}">
             <a href="{{ url('planning/machines') }}"><i class="fa fa-circle-o"></i> Machines Data</a>
           </li>
-
+          <li class="{{ Request::is('planning/locations') || Request::is('planning/locations/*') || Request::is('planning/locations/*/*') || Request::is('planning/locations/*/*/*') ? 'active' : '' }}">
+            <a href="{{ url('planning/locations') }}"><i class="fa fa-circle-o"></i> Locations Data</a>
+          </li>
           <li class="{{ Request::is('planning/work-center') || Request::is('planning/work-center/*') || Request::is('planning/work-center/*/*') || Request::is('planning/work-center/*/*/*') ? 'active' : '' }}">
             <a href="{{ url('planning/work-center') }}"><i class="fa fa-circle-o"></i> Work Center</a>
           </li>

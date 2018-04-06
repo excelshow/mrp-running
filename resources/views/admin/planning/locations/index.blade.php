@@ -1,53 +1,44 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Work Center | ')
+@section('title', 'Locations | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Work Center
+    Locations
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Work Center</li>
+    <li class="active">Locations</li>
   </ol>
 </section>
-
 <section class="content">
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header clearfix">
-          <a href="{{ url('planning/work-center/create') }}" class="btn btn-primary pull-right">Create</a>
+          <a href="{{ url('planning/locations/create') }}" class="btn btn-primary pull-right">Create</a>
         </div>
         <div class="box-body">
           <table id="datatable-general" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>Work Center Number</th>
-              <th>Machine ID</th>
-              <th>Asset Number</th>
-              <th>Queue Time</th>
-              <th>Setup Time</th>
-              <th>Execution Time</th>
-              <th>Utilization</th>
+              <th>Code</th>
+              <th>Name</th>
               <th>Created At</th>
+              <th>Updated At</th>
               <th>Action</th>
             </tr>
             </thead>
             <tbody>
-              @foreach ($works as $item)
+              @foreach ($locations as $item)
                 <tr>
-                  <td>{{ $item->number }}</td>
-                  <td>{{ $item->machine_id }}</td>
-                  <td>{{ $item->asset_number }}</td>
-                  <td>{{ $item->queue_time }}</td>
-                  <td>{{ $item->setup_time }}</td>
-                  <td>{{ $item->execution_time }}</td>
-                  <td>{{ $item->utilization }}</td>
+                  <td>{{ $item->code }}</td>
+                  <td>{{ $item->name }}</td>
                   <td>{{ $item->created_at }}</td>
+                  <td>{{ $item->updated_at }}</td>
                   <td>
-                    <a href="{{ route('planning.work-center.edit', $item->id) }}" class="btn btn-xs btn-info"">
+                    <a href="{{ route('planning.locations.edit', $item->id) }}" class="btn btn-xs btn-info"">
                       <span class="glyphicon glyphicon-edit"></span> Edit
                     </a>
                     <button class="btn btn-xs btn-danger remove-item" data-id="{{ encrypt($item->id) }}">
@@ -59,14 +50,10 @@
             </tbody>
             <tfoot>
             <tr>
-              <th>Work Center Number</th>
-              <th>Machine ID</th>
-              <th>Asset Number</th>
-              <th>Queue Time</th>
-              <th>Setup Time</th>
-              <th>Execution Time</th>
-              <th>Utilization</th>
+              <th>Code</th>
+              <th>Name</th>
               <th>Created At</th>
+              <th>Updated At</th>
               <th>Action</th>
             </tr>
             </tfoot>
@@ -102,7 +89,7 @@
           if (isConfirm) {
             $.ajax({
               type: "DELETE",
-              url: "{{ url('planning/work-center') }}"+"/"+id,
+              url: "{{ url('planning/locations') }}"+"/"+id,
               data: {_token: "{{ csrf_token() }}"},
               cache: false,
               success: function(data){
