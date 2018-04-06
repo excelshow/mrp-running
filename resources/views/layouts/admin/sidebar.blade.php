@@ -85,6 +85,44 @@
             </ul>
           </li>
 
+          <li class="treeview {{ Request::is('engineering/e-bom') || Request::is('engineering/e-bom/*') || Request::is('engineering/e-bom/*/*') || Request::is('engineering/e-bom/*/*/*') ? 'menu-open active' : '' }}">
+            <a href="#"><i class="fa fa-circle-o"></i> Engineering BOM
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="{{ Request::is('engineering/e-bom/assy') || Request::is('engineering/e-bom/assy/*') || Request::is('engineering/e-bom/assy/*/*') || Request::is('engineering/e-bom/assy/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/e-bom/assy') }}"><i class="fa fa-circle-o"></i> Assy</a>
+              </li>
+              <li class="{{ Request::is('engineering/e-bom/single-parts') || Request::is('engineering/e-bom/single-parts/*') || Request::is('engineering/e-bom/single-parts/*/*') || Request::is('engineering/e-bom/single-parts/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/e-bom/single-parts') }}"><i class="fa fa-circle-o"></i> Single Parts</a>
+              </li>
+              <li class="{{ Request::is('engineering/e-bom/approval') || Request::is('engineering/e-bom/approval/*') || Request::is('engineering/e-bom/approval/*/*') || Request::is('engineering/e-bom/approval/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/e-bom/approval') }}"><i class="fa fa-circle-o"></i> Approval</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="treeview {{ Request::is('engineering/m-bom') || Request::is('engineering/m-bom/*') || Request::is('engineering/m-bom/*/*') || Request::is('engineering/m-bom/*/*/*') ? 'menu-open active' : '' }}">
+            <a href="#"><i class="fa fa-circle-o"></i> Manufacturing BOM
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="{{ Request::is('engineering/m-bom/assy') || Request::is('engineering/m-bom/assy/*') || Request::is('engineering/m-bom/assy/*/*') || Request::is('engineering/m-bom/assy/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/m-bom/assy') }}"><i class="fa fa-circle-o"></i> Assy</a>
+              </li>
+              <li class="{{ Request::is('engineering/m-bom/single-parts') || Request::is('engineering/m-bom/single-parts/*') || Request::is('engineering/m-bom/single-parts/*/*') || Request::is('engineering/m-bom/single-parts/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/m-bom/single-parts') }}"><i class="fa fa-circle-o"></i> Single Parts</a>
+              </li>
+              <li class="{{ Request::is('engineering/m-bom/approval') || Request::is('engineering/m-bom/approval/*') || Request::is('engineering/m-bom/approval/*/*') || Request::is('engineering/m-bom/approval/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/m-bom/approval') }}"><i class="fa fa-circle-o"></i> Approval</a>
+              </li>
+            </ul>
+          </li>
+
           <li class="treeview">
             <a href="#"><i class="fa fa-circle-o"></i> Routing Master
               <span class="pull-right-container">
