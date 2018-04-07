@@ -69,7 +69,7 @@
             </ul>
           </li>
 
-          <li class="treeview {{ Request::is('engineering/bill-of-materials') || Request::is('engineering/bill-of-materials/*') || Request::is('engineering/bill-of-materials/*/*') || Request::is('engineering/bill-of-materials/*/*/*') ? 'menu-open active' : '' }}">
+          {{-- <li class="treeview {{ Request::is('engineering/bill-of-materials') || Request::is('engineering/bill-of-materials/*') || Request::is('engineering/bill-of-materials/*/*') || Request::is('engineering/bill-of-materials/*/*/*') ? 'menu-open active' : '' }}">
             <a href="#"><i class="fa fa-circle-o"></i> Bill Of Material
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -83,7 +83,7 @@
                 <a href="{{ url('engineering/bill-of-materials/approval') }}"><i class="fa fa-circle-o"></i> Approval</a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
           <li class="treeview {{ Request::is('engineering/e-bom') || Request::is('engineering/e-bom/*') || Request::is('engineering/e-bom/*/*') || Request::is('engineering/e-bom/*/*/*') ? 'menu-open active' : '' }}">
             <a href="#"><i class="fa fa-circle-o"></i> Engineering BOM
