@@ -213,7 +213,7 @@
         </ul>
       </li>
 
-      <li class="treeview">
+      <li class="treeview {{ Request::is('purchasing/*') || Request::is('purchasing/*/*') || Request::is('purchasing/*/*/*') || Request::is('purchasing/*/*/*/*') ? 'menu-open active' : '' }}">
         <a href="#">
           <i class="fa fa-asterisk"></i>
           <span>Purchasing</span>
@@ -223,7 +223,9 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="#"><i class="fa fa-circle-o"></i> Purchase Requisition</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
+          <li class="{{ Request::is('purchasing/purchase-orders') || Request::is('purchasing/purchase-orders/*') || Request::is('purchasing/purchase-orders/*/*') || Request::is('purchasing/purchase-orders/*/*/*') ? 'active' : '' }}">
+            <a href="{{ url('purchasing/purchase-orders') }}"><i class="fa fa-circle-o"></i> Purchase Order</a>
+          </li>
         </ul>
       </li>
 

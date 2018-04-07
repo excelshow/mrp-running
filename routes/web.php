@@ -20,13 +20,13 @@
 Route::get('/email','MailController@email');
 Route::post('/send','MailController@send');
 
-// Dashboard
+/* auth */
 Auth::routes();
 
-include('web_manufacturing.php');
+include('web_sales.php');
 include('web_engineering.php');
 include('web_planning.php');
-include('web_sales.php');
+include('web_purchasing.php');
 include('web_master.php');
 
 Route::group(['middleware' => 'auth'], function(){
