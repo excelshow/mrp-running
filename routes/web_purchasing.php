@@ -1,8 +1,7 @@
 <?php
 
-Route::group(['middleware' => 'auth', 'namespace'=>'Admin', 'prefix' => 'planning', 'as' => 'planning.'], function(){
-	Route::resource('work-center', 'WorkCenterController');
-	Route::resource('labors', 'LaborsController');
-	Route::resource('machines', 'MachinesController');
-	Route::resource('locations', 'LocationsController');
+Route::group(['middleware' => 'auth', 'namespace'=>'Admin', 'prefix' => 'purchasing', 'as' => 'purchasing.'], function(){
+
+	/* purchase orders */
+	Route::resource('purchase-orders', 'PurchaseOrdersController');
 });
