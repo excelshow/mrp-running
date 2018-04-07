@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Engineering Bill of Materials Assy Approval | ')
+@section('title', 'Manufacturing Bill of Materials Assy Approval | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Engineering Bill of Materials Assy Approval
+    Manufacturing Bill of Materials Assy Approval
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Engineering Bill of Materials Assy Approval</li>
+    <li class="active">Manufacturing Bill of Materials Assy Approval</li>
   </ol>
 </section>
 <section class="content">
@@ -17,7 +17,7 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header clearfix">
-          <a href="{{ url('engineering/e-bom/assy/create') }}" class="btn btn-primary pull-right">Create</a>
+          <a href="{{ url('engineering/m-bom/assy/create') }}" class="btn btn-primary pull-right">Create</a>
         </div>
         <div class="box-body">
           <table id="datatable-general" class="table table-bordered table-striped">
@@ -55,7 +55,7 @@
                   </td>
                   <td>{{ $item->updated_at }}</td>
                   <td>
-                    <a href="{{ route('engineering.e-bom.approval.edit', $item->id) }}" class="btn btn-xs btn-info"">
+                    <a href="{{ route('engineering.m-bom.approval.edit', $item->id) }}" class="btn btn-xs btn-info"">
                       <span class="glyphicon glyphicon-edit"></span> Approval
                     </a>
                   </td>

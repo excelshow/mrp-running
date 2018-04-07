@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Create Engineering Bill of Material | ')
+@section('title', 'Create Engineering Bill of Material Assy | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Create Engineering Bill of Material
+    Create Engineering Bill of Material Assy
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Create Engineering Bill of Material</li>
+    <li class="active">Create Engineering Bill of Material Assy</li>
   </ol>
 </section>
 <section class="content">

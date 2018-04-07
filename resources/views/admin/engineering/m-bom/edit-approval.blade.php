@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Approval Engineering Bill of Material Assy | ')
+@section('title', 'Approval Manufacturing Bill of Material Assy | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Approval Engineering Bill of Material Assy
+    Approval Manufacturing Bill of Material Assy
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Approval Engineering Bill of Material Assy</li>
+    <li class="active">Approval Manufacturing Bill of Material Assy</li>
   </ol>
 </section>
 <section class="content">
@@ -21,7 +21,7 @@
         <h4>Part Name: {{ $material->part_name }}</h4>
       </div>
       <div class="box-body">
-        {!! Form::model($material, ['route' => ['engineering.e-bom.approval.update', encrypt($material->id)],'method' =>'put','role'=>'form','files' => true])!!}
+        {!! Form::model($material, ['route' => ['engineering.m-bom.approval.update', encrypt($material->id)],'method' =>'put','role'=>'form','files' => true])!!}
         {{ csrf_field() }}
         <table class="table table-responsive table-striped">
           <thead>
@@ -96,7 +96,7 @@
           <div class="col-md-12">
             <hr>
                 <center>
-                    <a href="{{ url('engineering/e-bom/approval') }}" class="btn btn-default">
+                    <a href="{{ url('engineering/m-bom/approval') }}" class="btn btn-default">
                         <i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }}
                     </a>
                     <button type="submit" class="btn btn-danger btn-save">

@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Edit Engineering Bill of Material Assy | ')
+@section('title', 'Create Manufacturing Bill of Material Assy | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Edit Engineering Bill of Material Assy
+    Create Manufacturing Bill of Material Assy
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Edit Engineering Bill of Material Assy</li>
+    <li class="active">Create Manufacturing Bill of Material Assy</li>
   </ol>
 </section>
 <section class="content">
@@ -17,12 +17,12 @@
    <div class="col-md-12">
      <div class="box">
       <div class="box-header clearfix">
-        <h4>Edit</h4>
+        <h4>Create</h4>
       </div>
       <div class="box-body">
-        {!! Form::model($material, ['route' => ['engineering.e-bom.assy.update', encrypt($material->id)],'method' =>'put','role'=>'form','files' => true])!!}
+        {!! Form::open(['url' => 'engineering/m-bom/assy','files' => true]) !!}
         {{ csrf_field() }}
-        @include('admin.engineering.e-bom._form')
+        @include('admin.engineering.m-bom._form')
         {!! Form::close() !!} 
       </div>
        
