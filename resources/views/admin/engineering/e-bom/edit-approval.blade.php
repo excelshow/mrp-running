@@ -1,15 +1,15 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Approval Bill of Materials | ')
+@section('title', 'Approval Engineering Bill of Material | ')
 
 @section('content')
 <section class="content-header">
   <h1>
-    Approval Bill of Materials
+    Approval Engineering Bill of Material
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Approval Bill of Materials</li>
+    <li class="active">Approval Engineering Bill of Material</li>
   </ol>
 </section>
 <section class="content">
@@ -18,10 +18,10 @@
      <div class="box">
       <div class="box-header clearfix">
         <h4>Part Level: {{ $material->part_level }}</h4>
-        <h4>Part Number: {{ $material->part_number }}</h4>
+        <h4>Part Name: {{ $material->part_name }}</h4>
       </div>
       <div class="box-body">
-        {!! Form::model($material, ['route' => ['engineering.bill-of-materials.approval.update', encrypt($material->id)],'method' =>'put','role'=>'form','files' => true])!!}
+        {!! Form::model($material, ['route' => ['engineering.e-bom.approval.update', encrypt($material->id)],'method' =>'put','role'=>'form','files' => true])!!}
         {{ csrf_field() }}
         <table class="table table-responsive table-striped">
           <thead>
@@ -35,7 +35,7 @@
             </tr>
             <tr>
               <th>Part Next Higher Assy</th>
-              <td>{{ $material->part_next_higher_assy }}</td>
+              <td>{{ $material->part_nha }}</td>
             </tr>
             <tr>
               <th>Part Name</th>

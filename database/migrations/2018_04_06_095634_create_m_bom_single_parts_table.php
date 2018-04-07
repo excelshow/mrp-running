@@ -38,7 +38,7 @@ class CreateMBomSinglePartsTable extends Migration
             $table->decimal('quantity_material')->nullable();
             $table->decimal('quantity_kg_pcs')->nullable();
             $table->decimal('part_ratio')->nullable();
-            $table->decimal('dim_uom')->nullable();
+            $table->string('dim_uom')->nullable();
             $table->string('weight_uom')->nullable();
             $table->string('remark')->nullable();
             $table->integer('user_id_created')->nullable();
