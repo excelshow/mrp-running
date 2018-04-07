@@ -123,17 +123,22 @@
             </ul>
           </li>
 
-          <li class="treeview">
+          <li class="treeview {{ Request::is('engineering/routing-master') || Request::is('engineering/routing-master/*') || Request::is('engineering/routing-master/*/*') || Request::is('engineering/routing-master/*/*/*') ? 'menu-open active' : '' }}">
             <a href="#"><i class="fa fa-circle-o"></i> Routing Master
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Maintenance Data</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Approval</a></li>
+              <li class="{{ Request::is('engineering/routing-master/maintenance-data') || Request::is('engineering/routing-master/maintenance-data/*') || Request::is('engineering/routing-master/maintenance-data/*/*') || Request::is('engineering/routing-master/maintenance-data/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/routing-master/maintenance-data') }}"><i class="fa fa-circle-o"></i> Maintenance Data</a>
+              </li>
+              <li class="{{ Request::is('engineering/routing-master/approval') || Request::is('engineering/routing-master/approval/*') || Request::is('engineering/routing-master/approval/*/*') || Request::is('engineering/routing-master/approval/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('engineering/routing-master/approval') }}"><i class="fa fa-circle-o"></i> Approval</a>
+              </li>
             </ul>
           </li>
+
         </ul>
       </li>
 
