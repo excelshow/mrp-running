@@ -23,18 +23,24 @@
           <table id="datatable-general" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>Employee ID</th>
-              <th>Name</th>
+              <th>Order Number</th>
+              <th>Request Number</th>
+              <th>Unit Price</th>
+              <th>Quantity Order</th>
+              <th>Currency</th>
               <th>Created At</th>
               <th>Updated At</th>
               <th>Action</th>
             </tr>
             </thead>
             <tbody>
-              @foreach ($labors as $item)
+              @foreach ($orders as $item)
                 <tr>
-                  <td>{{ $item->employee_id }}</td>
-                  <td>{{ $item->name }}</td>
+                  <td>{{ $item->order_number }}</td>
+                  <td>{{ $item->request_number }}</td>
+                  <td>{{ $item->unit_price }}</td>
+                  <td>{{ $item->quantity_order }}</td>
+                  <td>{{ $item->currency_id }}</td>
                   <td>{{ $item->created_at }}</td>
                   <td>{{ $item->updated_at }}</td>
                   <td>
@@ -50,8 +56,11 @@
             </tbody>
             <tfoot>
             <tr>
-              <th>Employee ID</th>
-              <th>Name</th>
+              <th>Order Number</th>
+              <th>Request Number</th>
+              <th>Unit Price</th>
+              <th>Quantity Order</th>
+              <th>Currency</th>
               <th>Created At</th>
               <th>Updated At</th>
               <th>Action</th>

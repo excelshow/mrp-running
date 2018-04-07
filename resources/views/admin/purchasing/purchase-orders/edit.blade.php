@@ -20,7 +20,7 @@
         <h4>Edit</h4>
       </div>
       <div class="box-body">
-        {!! Form::model($labor, ['route' => ['purchasing.purchase-orders.update', encrypt($labor->id)],'method' =>'put','role'=>'form','files' => true])!!}
+        {!! Form::model($order, ['route' => ['purchasing.purchase-orders.update', encrypt($order->id)],'method' =>'put','role'=>'form','files' => true])!!}
         {{ csrf_field() }}
         @include('admin.purchasing.purchase-orders._form')
         {!! Form::close() !!} 

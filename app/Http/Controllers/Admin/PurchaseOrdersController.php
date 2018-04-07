@@ -18,8 +18,8 @@ class PurchaseOrdersController extends Controller
      */
     public function index()
     {
-        $labors = PurchaseOrder::orderBy('created_at', 'desc')->get();
-        $data['labors'] = $labors;
+        $orders = PurchaseOrder::orderBy('created_at', 'desc')->get();
+        $data['orders'] = $orders;
         return view('admin.purchasing.purchase-orders.index', $data);
     }
 
@@ -42,18 +42,30 @@ class PurchaseOrdersController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'employee_id' => 'required',
-            'name' => 'required',
+            'order_number' => 'required',
+            'request_number' => 'required',
+            'unit_price' => 'required',
+            'quantity_order' => 'required',
+            'currency_id' => 'required',
         ]);
 
-        $labor = new PurchaseOrder();
-        $labor->employee_id = $request->employee_id;
-        $labor->name = $request->name;
-        $labor->user_id_created = Auth::user()->id;
-        $labor->user_id_updated = Auth::user()->id;
-        $labor->save();
+        $order = new PurchaseOrder();
+        $order->order_number = $request->order_number;
+        $order->request_number = $request->request_number;
+        $order->unit_price = $request->unit_price;
+        $order->discount = $request->discount;
+        $order->tax = $request->tax;
+        $order->quantity_order = $request->quantity_order;
+        $order->total_price = $request->total_price;
+        $order->currency_id = $request->currency_id;
+        $order->order_date = $request->order_date;
+        $order->delivery_date = $request->delivery_date;
+        $order->status = $request->status;
+        $order->user_id_created = Auth::user()->id;
+        $order->user_id_updated = Auth::user()->id;
+        $order->save();
 
-        Toastr::success('Labor created.', 'Success');
+        Toastr::success('Purchase order created.', 'Success');
         return redirect('purchasing/purchase-orders');
     }
 
@@ -76,8 +88,8 @@ class PurchaseOrdersController extends Controller
      */
     public function edit($id)
     {
-        $labor = PurchaseOrder::find($id);
-        $data['labor'] = $labor;
+        $order = PurchaseOrder::find($id);
+        $data['order'] = $order;
         return view('admin.purchasing.purchase-orders.edit', $data);
     }
 
@@ -91,17 +103,29 @@ class PurchaseOrdersController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'employee_id' => 'required',
-            'name' => 'required',
+            'order_number' => 'required',
+            'request_number' => 'required',
+            'unit_price' => 'required',
+            'quantity_order' => 'required',
+            'currency_id' => 'required',
         ]);
 
-        $labor = PurchaseOrder::find(decrypt($id));
-        $labor->employee_id = $request->employee_id;
-        $labor->name = $request->name;
-        $labor->user_id_updated = Auth::user()->id;
-        $labor->save();
+        $order = PurchaseOrder::find(decrypt($id));
+        $order->order_number = $request->order_number;
+        $order->request_number = $request->request_number;
+        $order->unit_price = $request->unit_price;
+        $order->discount = $request->discount;
+        $order->tax = $request->tax;
+        $order->quantity_order = $request->quantity_order;
+        $order->total_price = $request->total_price;
+        $order->currency_id = $request->currency_id;
+        $order->order_date = $request->order_date;
+        $order->delivery_date = $request->delivery_date;
+        $order->status = $request->status;
+        $order->user_id_updated = Auth::user()->id;
+        $order->save();
 
-        Toastr::success('Labor updated.', 'Success');
+        Toastr::success('Purchase order updated.', 'Success');
         return redirect('purchasing/purchase-orders');
     }
 
@@ -114,10 +138,10 @@ class PurchaseOrdersController extends Controller
     public function destroy($id)
     {
         PurchaseOrder::find(decrypt($id))->delete();
-        Toastr::success('Labor deleted.', 'Success');
+        Toastr::success('Purchase order deleted.', 'Success');
 
-        $labors = PurchaseOrder::orderBy('created_at', 'desc')->get();
-        $data['labors'] = $labors;
+        $orders = PurchaseOrder::orderBy('created_at', 'desc')->get();
+        $data['orders'] = $orders;
         return view('admin.purchasing.purchase-orders.index', $data);
     }
 }
