@@ -210,6 +210,7 @@
         <ul class="treeview-menu">
           <li><a href="#"><i class="fa fa-circle-o"></i> Goods Received</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Goods Issued</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> Delivery</a></li>
         </ul>
       </li>
 
@@ -271,6 +272,9 @@
               </li>
               <li class="{{ Request::is('master/reference/shop-code') || Request::is('master/reference/shop-code/*') || Request::is('master/reference/shop-code/*/*') || Request::is('master/reference/shop-code/*/*/*') ? 'active' : '' }}">
                 <a href="{{ url('master/reference/shop-code') }}"><i class="fa fa-circle-o"></i> Shop Code</a>
+              </li>
+              <li class="{{ Request::is('master/reference/manufacturing-calendars') || Request::is('master/reference/manufacturing-calendars/*') || Request::is('master/reference/manufacturing-calendars/*/*') || Request::is('master/reference/manufacturing-calendars/*/*/*') ? 'active' : '' }}">
+                <a href="{{ url('master/reference/manufacturing-calendars') }}"><i class="fa fa-circle-o"></i> Manufacturing Calendar</a>
               </li>
               
             </ul>

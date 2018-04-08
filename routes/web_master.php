@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth', 'namespace'=>'Admin\Master', 'prefix' => '
 		Route::resource('shop-code', 'ShopCodeController');
 		Route::resource('sales-document-type', 'SalesDocumentTypeController');
 		Route::resource('operation-status', 'OperationStatusController');
+		Route::resource('manufacturing-calendars', 'ManufacturingCalendarsController');
 		Route::resource('customers', 'CustomersController');
 	});
 
