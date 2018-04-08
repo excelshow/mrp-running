@@ -83,3 +83,19 @@
 </section>
 
 @endsection
+
+@push('scripts')
+  <script type="text/javascript">
+    jQuery( document ).ready(function() {
+      var data = $( '#datatable-general' ).DataTable({
+        responsive: true,
+        bPaginate: true,
+        lengthMenu: [25, 50, 100, 500, 1000],
+        dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+      });
+    });
+  </script>
+@endpush
